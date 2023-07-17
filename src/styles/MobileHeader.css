@@ -19,7 +19,7 @@
     display: inline-block;
     width: 12vw; 
     height: 12vw;
-    background: url('../assets/hamburger.png') no-repeat center/cover; 
+    background: url('../assets/burger.png') no-repeat center/cover; 
     cursor: pointer;
     position: fixed;
     top: 4vw;

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Route, Routes, useLocation } from 'react-router-dom';
 import '../styles/App.css';
 import MobileHeader from '../components/MobileHeader';
-import Nav from '../components/Nav';
+import Nav from '../archive/NavOld';
 import Footer from '../components/Footer';
 import Home from '../pages/Home';
 import Interns from '../pages/Interns';
@@ -14,6 +14,7 @@ import ProfilePage from '../components/ProfilePage';
 import { useMediaQuery } from 'react-responsive';
 import ScrollTopButton from "../components/ScrollTopButton";
 import ParallaxContainer from '../components/ParallaxContainer'
+import MyComponent from '../components/MyComponent';
 
 
 function App() {
@@ -56,6 +57,7 @@ function App() {
             <Route path="/tools" element={<Tools />} />
             <Route path="/interns/:username" element={<ProfilePage />} />
             <Route path="/parallax" element={<ParallaxContainer />} />
+            <Route path="/my-component" element={<MyComponent />} />
           </Routes>
         </article>
 

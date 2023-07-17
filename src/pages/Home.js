@@ -13,7 +13,7 @@ import blueTrack from "../assets/Blue Track.svg"
 
 function Home() {
     const isMobile = useMediaQuery({ maxWidth: 767 }); 
-
+    console.log(process.env.REACT_APP_STRAPI_API_TOKEN)
     return (
       <div className={`home-page-container ${!isMobile && 'home-bg'}`}>
         {isMobile && (

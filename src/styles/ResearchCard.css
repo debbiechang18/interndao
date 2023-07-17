@@ -1,0 +1,60 @@
+.research-card-container {
+  /* border: 2px var(--aqua) solid; */
+  border-radius: 10px;
+  width: 427px;
+  display: flex;
+  padding: 10px;
+  background: rgb(33, 22, 50);
+  background: radial-gradient(closest-side, rgba(33, 22, 50, 0.1) 0%, rgba(255, 255, 255, 0.1) 99%);
+  backdrop-filter: blur(5px);
+  box-shadow: 0px -1px 2px 1px rgba(5, 234, 255, 0.7);
+  animation: cardFadeIn .3s ease-in-out; 
+  animation-fill-mode: both;
+  animation-delay: calc(var(--index) * 0.2s); 
+}
+
+.thumbnail-img {
+  width: 100%;
+  height: auto;
+}
+
+.card-title.play-font {
+  max-width: 50%;
+  line-height: 1.5em;
+  color: var(--yellow);
+  font-size: 1em;
+  padding-left: 10px;
+}
+
+.card-subtitle {
+  color: var(--aqua);
+  font-size: 1em;
+  line-height: 1.5em;
+  padding: 10px;
+}
+
+.bio-text {
+  height: auto;
+}
+
+@keyframes cardFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 767px) {
+  .research-card-container {
+    border-radius: 10px;
+    width: 90vw;
+  }
+
+  .card-title.play-font {
+    max-width: 70%;
+  }
+}

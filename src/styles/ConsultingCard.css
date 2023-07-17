@@ -1,0 +1,91 @@
+
+/* -------------CONSULTING CARD DESKTOP----------------*/
+@media (min-width: 768px) {
+    .consulting-card-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 225px;
+        height: 265px;
+        background-image: url("../assets/card-bg.png");
+        background-repeat: no-repeat;
+      }
+    
+    
+    .consulting-card-content {
+        position: relative;
+        top: -5px;
+        left: 2px;
+        width: 190px;
+        height: auto;
+        padding-bottom: 10px;
+    }
+    
+    .consulting-thumbnail-photo {
+        height: 190px;
+        width: 190px;
+        position: absolute;
+        top: -110px;
+        left: -2px;
+        border: 3px solid;
+    }
+    
+    h5.client-name {
+        height: 40px;
+        width: 190px;
+        position: absolute;
+        top: 100px;
+        text-align: center;
+        font-size: .75em;
+        width: 184px;
+        margin: 0;
+        overflow-wrap: break-word;
+        color: var(--fuschia);
+    }
+    }
+    
+    /* -------------CONSULTING CARD MOBILE----------------*/
+    
+    @media (max-width: 767px) {
+    
+        .consulting-card-container {
+            background-size: cover;
+            box-sizing: border-box;
+            width: 150px;
+            height: 200px;
+            display: flex;
+            flex-direction: column;
+            background-image: url("../assets/card-bg-sm.png");
+            background-size: 150px;
+            background-repeat: no-repeat;
+            
+        }
+    
+        .consulting-thumbnail-photo {
+            position: relative;
+            top: 12px;
+            left: 14px;
+            height: 120px;
+            width: 120px;
+            object-fit: cover;
+            border-bottom: 0px solid !important;
+            margin-bottom: 20px;
+            border-radius: 7px;
+        }
+    
+        h5.client-name { 
+            width: 130px;
+            font-size: max(10px, 0.7em);
+            text-align: left;
+            overflow-wrap: break-word;
+            margin: 10px;
+            padding: 0;
+            text-align: center;
+            line-height: 1.5em;
+            color: var(--fuschia);
+            
+        }
+    
+    
+    } 
+    

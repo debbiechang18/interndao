@@ -1,0 +1,193 @@
+.footer-container {
+    background-color: var(--dark-solid);
+    margin: 0;
+    padding-bottom: 2vw;
+    z-index: 997;
+}
+
+.footer-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 2vh;
+}
+
+.footer-logo-sm {
+    width: 5vw;
+}
+
+.footer-col-1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2vw;
+}
+
+.footer-text {
+    color: white;
+    overflow-wrap: break-word;
+    text-align: center;
+    font-weight: 300;
+    font-size: 1em;
+    line-height: 2em;
+}
+
+.footer-col {
+    flex: 1;
+    padding: 1vw;
+}
+
+h5.footer-heading {
+    font-size: 1.2em;
+    color: var(--fuschia);
+}
+
+ul.footer-links {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 0px;
+}
+
+li.footer-link {
+    display: flex;
+    align-items: center;
+    height: 3em;
+}
+
+.footer-link {
+    color: var(--yellow);
+    text-align: left;
+    font-size: 1em;
+    font-weight: 300;
+}
+
+.footer-link:hover {
+    color: var(--aqua);
+}
+
+.footer-icons-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 8vh;
+}
+
+.footer-icons {
+    font-family: "Font Awesome 5 Brands";
+    font-weight: 200;
+    font-style: normal;
+    font-size: 2em;
+    color: var(--yellow);
+}
+
+.fine-print {
+    color: var(--yellow);
+    font-size: 1em;
+    font-weight: 300;
+}
+
+ul.fine-print-links {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0;
+    margin: 0;
+    gap: 2vw;
+}
+
+.desktop-footer {
+    padding: 2vw;
+}
+
+@media (max-width: 767px) {
+    .main-footer {
+        padding: 0px;
+    }
+
+    .footer-container {
+        background-color: var(--dark-solid);
+        margin: 0px;
+    }
+
+    .mobile-footer {
+        display: flex;
+        flex-direction: column;
+        gap: 10vw;
+        padding: 10vw 0;
+    }
+
+    .mobile-footer-links {
+        display: flex;
+        flex-direction: column;
+        padding: vw;
+    }
+
+    h5.mobile-footer-heading {
+        font-size: 1em;
+        text-align: center;
+        color: var(--fuschia);
+    }
+
+    h5.mobile-footer-heading:hover {
+        color: var(--yellow);
+    }
+
+    .mobile-footer-icons-container {
+        padding: 5vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 2em;
+    }
+
+    .footer-icons-mobile {
+        font-family: "Font Awesome 5 Brands";
+        font-weight: 200;
+        font-style: normal;
+        color: var(--yellow);
+        font-size: 1.7em;
+    }
+
+    .logo-mission-container-mobile {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 5vw;
+    }
+
+    img.footer-logo-mobile {
+        width: 40vw;
+    }
+
+    p.footer-text-mobile {
+        color: white;
+        text-align: center;
+        width: 75vw;
+        font-size: 1em;
+        font-weight: 300;
+        line-height: 1.5em;
+    }
+
+    .mobile-link-sm {
+        color: var(--yellow);
+        text-align: center;
+    }
+
+    .legal-links-mobile,
+    .copyright-mobile {
+        color: var(--yellow);
+        text-align: center;
+        font-size: 1em;
+    }
+
+    .copyright-mobile {
+        line-height: 6vw;
+    }
+}
+
+
+@media (min-width: 768px) and (orientation: portrait) {
+    
+}

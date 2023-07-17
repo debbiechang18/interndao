@@ -1,0 +1,232 @@
+* {
+  box-sizing: border-box;
+}
+.dao-handshake {
+  color: var(--yellow);
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+}
+
+
+.home-page-container {
+  width: 50vw;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6vh;
+}
+
+
+
+
+
+.contact-info-text {
+  color: var(--yellow);
+  font-size: 1em;
+  font-weight: 300;
+}
+
+.philosophy-container {
+  height: 50vh;
+  position: absolute;
+  left: 50%;
+}
+
+
+
+/* ---------------------MOBILE---------------------------- */
+
+@media (max-width: 767px) {
+  .home-page-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+  }
+
+
+#dao-handshake-mobile {
+  position: relative;
+  top: 2%;
+  font-size: 1.5em;
+  padding: 0;
+  justify-content: center;
+  gap: .7em;
+}
+
+ul.home-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+
+}
+  a.home-link,
+  .philosophy-text .text-field,
+  .contact-info-text {
+    font-size: 1em;
+    white-space: nowrap;
+  }
+
+  a.home-link {
+    color: var(--aqua);
+    font-size: max(1em, 3vw);
+    font-weight: 300;
+    display: flex;
+    gap: 4vw;
+    align-items: center;
+  }
+
+  
+
+.contact-info-container-mobile {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 45vw;
+  padding-left: 5vw;
+}
+
+  .contact-info-mobile{
+    display: flex;
+    gap: 1em;
+    align-items: center;
+  }
+  
+  
+  .contact-info-container-mobile {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+  }
+
+  .contact-info-text {
+    white-space: nowrap;
+  }
+
+  .philosophy-container {
+    position: static;
+    width: 85vw;
+    height: 85vw;
+}
+
+.philosophy-element {
+  display: block;
+    width: 85vw;
+    height: 85vw;
+    position: static;
+    text-align: center;
+}
+
+}
+
+/* ---------------------DESKTOP---------------------------- */
+
+@media (min-width: 768px) {
+
+
+  .home-page-container {
+    position: relative;
+    width: 50vw;
+    padding-bottom: 50vh;
+  
+  }
+
+  .philosophy-container {
+    transform-origin: top;
+    width: max(290px, 22vw);
+    height: max(290px, 22vw);
+    top: 27vw;
+    left: 12vw;
+
+  }
+
+  div#blue-track {
+    position: relative;
+    margin-top: 5vh;
+    width: 50vw;
+    padding-bottom: 20vw;
+  }
+  
+  .blue-track {
+    position: absolute;
+    right: 0%;
+    width: 50vw;
+  }
+  
+  .yellow-track {
+    position: absolute;
+    top: 10%;
+    right: 0;
+    width: 35vw;
+  }
+
+
+  /* gap between triangle and label*/ 
+  .home-menu-desktop-item a{
+    width: max-content;
+    display: flex;
+    gap: 1em;
+    align-items: center;
+    justify-content: center;
+    color: var(--yellow);
+  }
+
+  h5.home-menu-desktop-label {
+    margin: 0;
+    font-size: max(14px, 1.5vw);
+    font-weight: 300;
+
+  }
+
+  .home-menu-triangle {
+    height: 1em;
+  }
+  
+
+}
+
+/*--------------------FINE TUNING -----------------------*/
+@media (min-width: 768px) and (max-width: 992px) {
+  ul.home-menu-desktop {
+    width: max-content;
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    gap: .3vw;
+    position: absolute;
+    top: 25%;
+    left: 35%;
+  }
+
+  .home-menu-triangle {
+    height: .8em;
+  }
+  
+}
+
+@media (min-width: 992px)  {
+  ul.home-menu-desktop {
+    width: max-content;
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    gap: .6vw;
+    position: absolute;
+    top: 25%;
+    left: 38%;
+  }
+
+}
+
+  @media (min-width: 1100px) {
+    ul.home-menu-desktop {
+      top: 28%;
+      left: 40%;
+    }
+
+  
+}

@@ -1,0 +1,11 @@
+.back-button{
+    height: 60px;
+    color: var(--fuschia-semi-transparent);
+    font-size: 1em;
+    background-color: transparent;
+    border: none;
+}
+
+.back-button:hover {
+    color: var(--fuschia);
+}

@@ -1,0 +1,84 @@
+
+
+    .consulting-page-container {
+        background: radial-gradient(
+          closest-side,
+          rgba(16, 12, 28, 0.9) 40%,
+          rgba(255, 255, 255, 0.07) 90%
+        );
+        backdrop-filter: blur(10px);
+        border-radius: 10px;
+        box-shadow: 0px 1px 5px 1px rgba(5, 234, 255, 0.7);
+        width: 90%;
+        height: 80vh;
+        display: flex;
+        justify-content: center;
+        
+      }
+      
+      .consulting-page-wrapper {
+        padding-top: 2vh;
+        height: 70vh;
+        margin: 3vw 1vw 0 3vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        overflow-y: scroll;
+
+
+      }
+
+      .consulting-entry-wrapper {
+        margin-bottom: 5vw;
+      }
+
+    .consulting-page-header {
+        color: var(--aqua);
+    }
+
+    .consulting-page-text {
+        color: var(--aqua);
+        margin-right: 1vw;
+        font-weight: 300;
+        font-size: max(1.2vw, 16px);
+
+    }
+
+    .consulting-page-wrapper::-webkit-scrollbar {
+      width: 5px;
+    }
+    
+    .consulting-page-wraooer::-webkit-scrollbar-track {
+      background-color: var(--dark-transparent);
+    }
+    
+    .consulting-page-wrapper::-webkit-scrollbar-thumb {
+      background-color: var(--aqua);
+      border-radius: 10px;
+      background-clip: content-box;
+    }
+
+
+  /*----------------------------DESKTOP / TABLET------------------------*/
+
+@media (min-width: 768px) {
+  .consulting-page-wrapper {
+    -webkit-mask-image: linear-gradient(to bottom, white 90%, transparent 100%);
+    mask-image: linear-gradient(to bottom, white 90%, transparent 100%);
+  }
+
+}
+
+  /*----------------------------MOBILE------------------------*/
+
+
+
+    @media (max-width: 767px) {
+
+        .consulting-page-container {
+            width: 85%;
+            height: 80vh;
+            margin: 2vh 0;
+          }
+
+    }

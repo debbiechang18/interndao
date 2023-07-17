@@ -1,0 +1,34 @@
+.card-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-bottom: 5vh;;
+    justify-content: flex-start;
+    margin-top: 10vh;
+}
+
+.pagination-buttons {
+    width: 90%;
+    margin-top: 3vw;
+    display: flex;
+    justify-content: center;
+    gap: 1vw;
+}
+.pagination-buttons > button {
+    font-family: 'Press Start 2P', cursive;
+    background-color: transparent;
+    color: var(--aqua);
+    font-size: 1em;
+    border: none;
+}
+
+.pagination-buttons > button.active {
+    color: var(--yellow);
+}
+
+@media (max-width: 767px) {
+    .card-list {
+        justify-content: center;
+    }
+}

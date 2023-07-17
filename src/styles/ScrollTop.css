@@ -1,0 +1,60 @@
+.scroll-top-container {
+  display: block;
+  width: max-content;
+  height: max-content;
+}
+.scroll-top-button {
+    position: fixed;
+    z-index: 999;
+    border: none;
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
+    background: transparent;
+  }
+  
+  .scroll-top-button.show {
+    opacity: 1;
+  }
+  
+  .up-arrow-icon {
+    padding: 0px;
+    border-radius: 10px;
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  .up-arrow-icon:hover {
+    opacity: 1;
+    transition: none;
+  }
+  /*=====================DESKTOP=======================*/
+
+  @media (min-width: 768px) {
+    .up-arrow-icon {
+        width: 5vw;
+        height: 5vw;
+
+    }
+
+    .scroll-top-button {
+      bottom: 5vh;
+      right: 1.5vw;
+      opacity: 0;
+    }
+    
+  }
+
+  /*=====================MOBILE=======================*/
+
+  @media (max-width: 767px) {
+    .up-arrow-icon {
+        width: 8vw;
+        height: 8vw;
+
+    }
+
+    .scroll-top-button {
+      bottom: 5vh;
+      right: 5vw;
+    }
+    
+  }

@@ -1,0 +1,84 @@
+.parallax-container {
+  margin: 0;
+  padding: 0;
+  width: 80vw;
+  height: 100vh;
+  font-family: 'Roboto', sans-serif;
+  position: fixed;
+  overflow: scroll;
+  background: white;
+}
+
+@import url("https://fonts.googleapis.com/css?family=Roboto:100");
+
+h1 {
+  letter-spacing: 3px;
+  margin: 0;
+  padding-left: 10px;
+  padding-top: 10px;
+  color: #fff;
+  font-weight: 100;
+}
+
+.p-header {
+  width: 100%;
+  height: 50px;
+  position: sticky;
+  top: 0px;
+}
+
+.p-header:nth-of-type(1){
+   background-color: dodgerblue;
+
+}
+
+.p-header:nth-of-type(2){
+   background-color: rebeccapurple;
+}
+
+.p-header:nth-of-type(3){
+   background-color: chartreuse;
+}
+
+.p-header:nth-of-type(4){
+  background-color: salmon;
+}
+
+.p-content {
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(70deg, orange, crimson);
+  padding-top: 50px;
+  margin: 0;
+    
+}
+
+ .p-header-2{
+  top: 50px;
+}
+
+.p-header-3{
+  top: 100px;}
+
+.p-header-4{
+  top: 150px;
+}
+
+.p-header-5{
+  top: 200px;
+background-color: yellow}
+
+.p-header-6{
+  top: 250px;
+background-color: green;}
+
+.p-header-7{
+  top: 300px;
+background-color: black;
+}
+  
+.p-content-7 {
+  display: flex;
+flex-direction: column;
+justify-content: space-between;
+}

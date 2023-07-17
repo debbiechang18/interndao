@@ -1,0 +1,14 @@
+[
+    {
+        "section": "apply to be an intern",
+        "buttonID": "button1"
+    },
+    {
+        "section": "consulting services",
+        "buttonID": "button2"
+    },
+    {
+        "section": "general contact",
+        "buttonID": "button3"
+    }
+]

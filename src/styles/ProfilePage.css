@@ -1,0 +1,398 @@
+/* General styles */
+
+.profile-back-button {
+  width: 90%;
+}
+
+.profile-page-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+.profile-img {
+  width: 90%;
+  height: auto;
+  border: 2px solid var(--fuschia);
+}
+
+
+a.href {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.social-links {
+  width: 100%;
+  padding: 0;
+  display: flex;
+  justify-content: space-evenly;
+  gap: 1em;
+}
+
+.profile-page-icons {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 200;
+  font-style: normal;
+  color: var(--yellow);
+}
+
+.link-icon {
+  height: 1.1em;
+  color: var(--yellow);
+}
+
+.link-text {
+  display: none;
+}
+
+.link-text,
+.role-title,
+h2.profile-page-username {
+  color: var(--fuschia);
+}
+
+.bio-text-container {
+  height: 60vh;
+  background-color: transparent;
+  overflow-y: scroll;
+}
+
+.bio-text {
+  background-color: transparent;
+}
+
+.bio-text .text-field {
+  width: 95%;
+  background-color: transparent;
+  color: var(--aqua);
+  font-size: 1em;
+  font-weight: 300;
+  border: none;
+  padding-right: 5%;
+  padding-bottom: 3vh;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+/* =======================PROFILE PAGE DESKTOP LG============================*/
+@media (min-width: 1440px) {
+  .role-title,
+  h6.link-text {
+    color: var(--fuschia);
+    margin: 1em;
+  }
+
+  .left-panel {
+    width: 45%;
+  }
+
+  .right-panel {
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .bio-text-container {
+    width: 100%;
+  }
+
+  .bio-text > .text-field {
+    padding-left: 5%;
+  }
+
+  .social-links {
+    flex-direction: column;
+  }
+
+  .social-link > a {
+    display: flex;
+    gap: 1em;
+  }
+
+  a > .link-text {
+    display: block;
+    word-wrap: break-word;
+  }
+
+  li.social-link {
+    font-size: 1em;
+  }
+
+  .bio-text > .text-field {
+    font-size: 1.2em;
+    line-height: 1.5em;
+    font-weight: 300;
+  }
+}
+
+/* =======================PROFILE PAGE DESKTOP SM /TABLET ============================*/
+@media (min-width: 768px) {
+  .bio-text-container {
+    -webkit-mask-image: linear-gradient(to bottom, white 90%, transparent 100%);
+    mask-image: linear-gradient(to bottom, white 90%, transparent 100%);
+  }
+  
+  .profile-page-container {
+    padding-top: 10vh;
+  }
+
+
+
+
+  .desktop-profile-container {
+    grid-area: profile;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .profile-wrapper {
+    background: radial-gradient(closest-side, rgba(16, 12, 28, .9) 40%, rgba(255, 255, 255, 0.07) 90%);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    width: 90%;
+    height: 80vh;
+    display: flex;
+    padding: 10px;
+    box-shadow: -2px 0px 5px 1px rgba(5, 234, 255, .7);
+    margin: 0px;
+  }
+
+  .left-panel {
+    width: 30%;
+    padding: 10px;
+  }
+
+  .right-panel {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  h2.profile-page-username {
+    font-size: 1.5em;
+  }
+
+  h4.role-title{
+    font-size: 1em;
+  }
+
+  .profile-img {
+    width: 90%;
+    height: auto;
+    border: 2px solid var(--fuschia);
+  }
+
+  a.href {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+  }
+}
+
+/* =======================PROFILE PAGE MOBILE ============================*/
+@media (max-width: 767px) {
+  a {
+    height: auto;
+  }
+
+  .profile-page-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    height: auto;
+    gap: 3vh;
+    margin: 0;
+  }
+
+  .profile-container {
+    width: 100vw;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .profile-wrapper {
+    width: 90vw;
+    background-color: transparent;
+    backdrop-filter: blur(5px);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2vh;
+    padding: 10vw 2vw;
+    box-shadow: 0px 2px 5px 0px var(--fuschia);
+    height: max-content;
+  }
+
+  .profile-img {
+    width: 70vw;
+    height: auto;
+    border: 5px solid var(--fuschia);
+    border-radius: 20px;
+  }
+
+  .social-links {
+    gap: 10vw;
+  }
+
+  .profile-page-icons {
+    font-size: max(30px, 6vw);
+  }
+
+  .link-icon {
+    height: max(23px, 5vw);
+  }
+
+  h2.profile-page-username {
+    font-size: max(1.5em, 5vw);
+  }
+
+  h3.role-title {
+    font-size: max(1em, 3vw);
+    margin: 0;
+  }
+
+  .bio-text-container {
+    height: auto;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    overflow-y: visible;
+  }
+
+  .bio-text-container .text-field {
+    width: 90%;
+    overflow: visible;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    background-color: transparent;
+    color: var(--aqua);
+    font-size: max(1em, 3vw);
+    line-height: 1.5em;
+    font-weight: 300;
+    border: none;
+    margin: 10vw 0;
+  }
+
+  .profile-page-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .bio-text-container::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  .bio-text-container::-webkit-scrollbar-track {
+    background-color: var(--dark-transparent);
+  }
+
+  .bio-text-container::-webkit-scrollbar-thumb {
+    background-color: var(--aqua);
+    border-radius: 10px;
+    background-clip: content-box;
+  }
+}
+
+/* =======================USER AWARDS ============================*/
+.user-awards-container {
+  grid-area: awards;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2vw;
+  height: 26vh;
+}
+
+.user-awards-wrapper {
+  background: radial-gradient(closest-side, rgba(16, 12, 28, .3) 10%, rgba(255, 255, 255, 0.07) 10%);
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  width: 90%;
+  height: 10vh;
+  display: flex;
+  padding: 10px;
+  box-shadow: -2px 0px 5px 1px rgba(5, 234, 255, .7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.award-label {
+  width: 100%;
+  color: var(--yellow);
+  text-align: center;
+  margin-left: -3vw;
+  font-size: max(.8em, 1vw);
+}
+
+.trophy-icon::before {
+  content: '\1F3C6';
+  font-size: 40px;
+  margin-left: 1vw;
+}
+
+/* =======================USER AWARDS MOBILE ============================*/
+@media (max-width: 767px) {
+  .user-awards-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: radial-gradient(closest-side, rgba(16, 12, 28, .9) 40%, rgba(255, 255, 255, 0.07) 90%);
+    box-shadow: 0px 2px 5px .5px var(--fuschia);
+    backdrop-filter: blur(5px);
+    border-radius: 10px;
+    width: 90vw;
+    padding: 0 2vw;
+  }
+
+  .user-awards-wrapper {
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .award-label {
+    width: 100%;
+    color: var(--yellow);
+    text-align: center;
+    margin-left: -6vw;
+    font-size: max(.7em, 2.5vw);
+    line-height: 1.5em;
+  }
+
+  .trophy-icon::before {
+    content: '\1F3C6';
+    font-size: 5vw;
+    margin-left: 3vw;
+  }
+}
+
+/* =======================USER AWARDS TABLET ============================*/
+@media (min-width: 768px) and (max-width: 992px) {
+  .award-label {
+    line-height: 1.5em;
+  }
+}

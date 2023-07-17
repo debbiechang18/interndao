@@ -1,0 +1,131 @@
+
+.button-container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2em 0;
+}
+
+.icon-button-lg {  
+    width: 500px;
+    height: 120px;
+    font-size: 1.15em;
+    transition-duration: 0.4s;
+    cursor: pointer;
+  }
+
+#button1 {
+  background-color: var(--dark-transparent);
+  color: var(--fuschia); 
+  border: 2px solid var(--fuschia);
+  border-radius: 10px;
+}
+
+#button1:hover {
+  background-color: var(--fuschia);
+  color: white;
+}
+
+#button2 {
+  background-color: var(--dark-transparent);
+  color: var(--light-blue); 
+  border: 2px solid var(--light-blue);
+  border-radius: 10px;
+}
+
+#button2:hover {
+  background-color: var(--light-blue);
+  color: white;
+}
+
+#button3 {
+  background-color: var(--dark-transparent);
+  color: var(--fuschia); 
+  border: 2px solid var(--yellow);
+  border-radius: 10px;
+}
+
+#button3:hover {
+  background-color: var(--yellow);
+  color: white;
+}
+
+
+.icon-text-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: #f1f1f1;
+  border: none;
+  color: #333;
+}
+
+.text-icon-text {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  background-color: #f1f1f1;
+  border: none;
+  color: #333;
+}
+.icon-only {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  background-color: #f1f1f1;
+  border: none;
+  color: #333;
+}
+
+.left-icon::before {
+  font-size: 2em;
+  margin-left: 40px;
+  content: var(--crystal-ball);
+}
+
+.right-icon::after {
+  font-size: 2em;
+  margin-right: 40px;
+  content: var(--crystal-ball);
+}
+
+.center-icon::after {
+  font-size: 2em;
+  margin-right: 20px;
+  margin-left: 20px;
+  content: var(--handshake);
+}
+
+.wave-icon::after {
+  font-size: 2vw;
+  margin-right: 20px;
+  margin-left: 20px;
+  content: var(--wave);
+}
+
+.icon-button-md {  
+  width: max-content;
+  height: max(50px, 4vw);
+  font-size: 14px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+/* 
+@media (max-width: 767px) {
+
+  .icon-button-md {  
+    width: max-content;
+    height: 25%;
+    font-size: 14px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+  }
+
+
+
+} */

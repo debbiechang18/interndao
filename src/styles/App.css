@@ -1,0 +1,102 @@
+
+
+.main-head {
+  grid-area: header;
+}
+
+.side {
+  grid-area: sidebar;
+}
+
+.content {
+  grid-area: content;
+
+}
+
+.main-footer {
+  grid-area: footer;
+}
+
+
+/* -------------APP MOBILE----------------*/
+
+@media (max-width: 767px) {
+
+  .app-container {
+      display: grid;
+      grid-template-rows: auto max-content auto;
+      grid-template-areas:
+      "header"
+      "content"
+      "footer";
+  }
+
+  .content {
+      width: 100vw;
+      margin-bottom: 20vw;
+  }
+
+}
+
+
+
+/* -------------APP DESKTOP----------------*/
+
+@media (min-width: 768px) {
+  .app-container {
+      min-height: 100vh;
+      display: grid;
+      grid-template-columns: 3fr 7fr;
+      grid-template-rows:  auto max-content auto;
+      grid-template-areas:
+      "header header"
+      "sidebar content"
+      "footer footer";
+  }
+
+  .side {
+    height: 100vh;
+    width: 25vw;
+  }
+
+  .home-side {
+    width: 30vw;
+  }
+
+
+  .footer {
+      position: fixed;
+      margin-top: 4fr;
+  }  
+
+  .content {
+      min-height: 100vh;
+      margin: 0 0 20vw 0;
+      position: relative;
+  }
+
+  .parallax-content {
+    position: fixed;
+    left: 25vw;
+    overflow: scroll;
+  }
+
+  .app-container-home {
+      width: 100%;
+      height: 100vh;
+      display: grid;
+      grid-template-columns: 5fr 5fr;
+      grid-template-rows: auto max-content auto;
+      grid-template-areas:
+      "header  header"
+      "sidebar content"
+      "footer footer";
+  }
+
+}
+
+
+
+
+
+

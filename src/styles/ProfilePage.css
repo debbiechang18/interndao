@@ -8,6 +8,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 2vw;
 
 }
 .profile-img {
@@ -319,7 +320,7 @@ h2.profile-page-username {
   justify-content: center;
   align-items: center;
   gap: 2vw;
-  height: 26vh;
+  height: max-content;
 }
 
 .user-awards-wrapper {

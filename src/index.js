@@ -9,6 +9,8 @@ import "./styles/App.css"
 import ScrollToTop from "./components/ScrollTop"
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+const basename = document.querySelector('base')?.getAttribute('href') ?? '/'    
+
 root.render(
   <React.StrictMode>
     <BrowserRouter>

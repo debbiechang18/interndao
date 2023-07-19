@@ -1,38 +1,93 @@
-.App {
-  text-align: center;
+.app-container {
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.app-container > * {
+  border: 2px red solid;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.main-head {
+  grid-area: header;
+}
+.side {
+  grid-area: sidebar;
+}
+.content {
+  grid-area: content;
+}
+.main-footer {
+  grid-area: footer;
+}
+
+
+/* -------------APP MOBILE----------------*/
+
+@media (max-width: 767px) {
+
+  .app-container {
+      display: grid;
+      grid-template-rows: auto max-content auto;
+      grid-template-areas:
+      "header"
+      "content"
+      "footer";
   }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  .content {
+      width: 100vw;
+      margin-bottom: 20vw;
   }
-  to {
-    transform: rotate(360deg);
-  }
+
 }
+
+
+
+/* -------------APP DESKTOP----------------*/
+
+@media (min-width: 768px) {
+  .app-container {
+      height: 100vh;
+      display: grid;
+      grid-template-rows:  auto max-content auto;
+      grid-template-areas:
+      "header header"
+      "sidebar content"
+      "footer footer";
+  }
+
+  .side {
+    height: 100vh;
+    width: 25vw;
+  }
+
+  .home-side {
+    width: 40vw;
+  }
+
+  .content {
+      height: 100vh;
+      width: 60vw;
+      margin: 0 0 20vw 0;
+  }
+
+  .home-content {
+    width: 60vw;
+  }
+
+  .footer {
+    position: fixed;
+    margin-top: 4fr;
+}  
+
+
+}
+
+
+
+
+
+
+

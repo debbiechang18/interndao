@@ -1,13 +1,69 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+:root {
+  --fuschia: rgb(206, 4, 162);
+  --light-blue: #2B8FF7;
+  --yellow: #F7D824;
+  --violet: #9672FF;
+  --aqua: #05EAFF;
+  --dark-solid: #120D1B;
+  --dark-transparent: rgba(38,31,50,.7); 
+  --fuschia-semi-transparent: rgba(206, 4, 162, .8);
+  --fuschia-transparent: rgba(206, 4, 162, .3);
+  --crystal-ball: "\01F52E";
+  --handshake: "\1F91D";
+  --wave: "\1F44B";
+  --hamburger: "\1F354";
+  --radial-gradient: radial-gradient(closest-side, rgba(16, 12, 28, .9) 40%, rgba(255,255,255,0.07) 90%);
+  --box-shadow-blue-bottom: -2px 0px 5px 1px rgba(5, 234, 255, .7);
+
+
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+#root {
+  width: 100%;
 }
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style-type: none;
+}
+
+.play-font {font-family: 'Press Start 2P', cursive;}
+
+.trispace-font {font-family: 'Trispace', sans-serif;}
+
+h1 {
+  font-size: 2.25em;
+}
+h2 {
+  font-size: 2em;
+}
+h3 {
+  font-size: 1.75em;
+}
+h4 {
+  font-size: 1.25em;
+}
+h5 {
+  font-size: 1em;
+}
+h6 {
+  font-size: .83em;
+}
+
+body {
+  position : relative;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-image: url('./assets/grid-background.svg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: top right;
+  background-size: cover;
+  z-index: -1;
+}
+

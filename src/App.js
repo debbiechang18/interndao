@@ -43,6 +43,7 @@ const App = () => {
             onClick={toggleMenu}
           >
           </div>)}
+          
           <Routes>
             <Route exact path="/" element={<Home />} />
             <Route path="/interns" element={<Interns />} />

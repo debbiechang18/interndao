@@ -1,10 +1,18 @@
 import React from "react";
-
+import { useMediaQuery } from 'react-responsive'
+import MobileHomePage from "./MobileHomePage";
+import DesktopHomePage from "./DesktopHomePage";
+import VintageTextBox from "../components/VintageTextbox"
 
 const Home = () => {
-  return (
-    <h1>THIS IS MY APP BITCH</h1>
-  ) 
+  const isMobile = useMediaQuery({ maxWidth: 767 }); 
+
+  if (isMobile) {
+    return <MobileHomePage />
+  }
+  else {
+    return <DesktopHomePage />
+  }
 }
 
 export default Home

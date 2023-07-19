@@ -1,0 +1,70 @@
+.home-page-container {
+  position: relative;
+  height: 100%;
+  width: 50vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 50vh;
+  gap: 6vh;
+}
+
+.contact-info-text {
+    color: var(--yellow);
+    font-size: 1em;
+    font-weight: 300;
+  }
+
+.track-container {
+  position: relative;
+  margin-top: 5vh;
+  width: 50vw;
+  padding-bottom: 20vw;
+}
+  
+.blue-track {
+  position: absolute;
+  right: 0%;
+  width: 50vw;
+}
+
+.yellow-track {
+  position: absolute;
+  top: 10%;
+  right: 0;
+  width: 35vw;
+}
+
+/* gap between the list items */
+ul.home-menu-desktop {
+  width: max-content;
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  gap: .6vw;
+  position: absolute;
+  top: 28%;
+  left: 40%;
+}
+
+/* gap between triangle and label */
+.home-menu-desktop-item a{
+  width: max-content;
+  display: flex;
+  gap: 1em;
+  align-items: center;
+  justify-content: center;
+  color: var(--yellow);
+}
+
+
+  h5.home-menu-desktop-label {
+    margin: 0;
+    font-size: max(14px, 1.5vw);
+    font-weight: 300;
+
+  }
+
+  .home-menu-triangle {
+    height: 1em;
+  }

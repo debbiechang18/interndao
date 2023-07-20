@@ -5,7 +5,7 @@ import './index.css';
 import "./App.css"
 import App from './App';
 import "./assets/grid-background.svg"
-import ScrollToTop from "./components/ScrollToTop"
+import ScrollToTop from "./functions/ScrollToTop"
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 

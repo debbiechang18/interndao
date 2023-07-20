@@ -1,5 +1,4 @@
 import React from 'react'
-import triangle from "../assets/triangle.png"
 import '../styles/DesktopHomePage.css'
 import { Link } from "react-router-dom"
 import VintageTextbox from "../components/VintageTextbox"
@@ -16,19 +15,19 @@ const DesktopHomePage = () => {
         <ul className="home-menu-desktop">
             <li className="home-menu-desktop-item trispace-font">
             <Link to="/interns">
-                <img src={triangle} alt="triangle" className="home-menu-triangle" />
+                <h5 className="triangle-icon">&#9654;</h5>
                 <h5 className="home-menu-desktop-label">meet the interns</h5>
             </Link>
             </li>
             <li className="home-menu-desktop-item trispace-font">
                 <Link to="/apply">
-                    <img src={triangle} alt="triangle" className="home-menu-triangle" />  
+                  <h5 className="triangle-icon">&#9654;</h5>
                     <h5 className="home-menu-desktop-label">apply to be an intern</h5>
                 </Link>
                 </li>
             <li className="home-menu-desktop-item trispace-font">
                 <Link to="/consulting">
-                    <img src={triangle} alt="triangle" className="home-menu-triangle" /> 
+                    <h5 className="triangle-icon">&#9654;</h5>
                     <h5 className="home-menu-desktop-label">learn about services</h5>
                 </Link>
             </li>

@@ -1,0 +1,25 @@
+ul.navigation-links {
+    width: max-content;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.nav-link {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+
+.triangle-icon-nav, .link-label {
+    color: var(--aqua);
+}
+
+.active > .nav-link > h5,
+.nav-link > h5:hover {
+    color: var(--yellow)
+}
+
+.inactive > .nav-link > .triangle-icon-nav {
+    visibility: hidden;;
+}

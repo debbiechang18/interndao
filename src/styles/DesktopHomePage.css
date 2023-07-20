@@ -9,8 +9,8 @@
 }
 
 .track-container {
-  position: relative;
-  left: 0;
+  position: absolute;
+  right: 0;
   margin-top: 5vh;
   width: 50vw;
   padding-bottom: 20vw;
@@ -59,12 +59,17 @@ ul.home-menu-desktop {
 
   }
 
-  .home-menu-triangle {
-    height: 1em;
+  .triangle-icon {
+    color: var(--yellow);
+  }
+
+  .home-menu-desktop-item a:hover{
+    background-color: var(--fuschia);
   }
 
   
   .philosophy-container {
+    position: absolute;
     height: 50vh;
     transform-origin: top;
     width: max(290px, 22vw);
@@ -72,3 +77,21 @@ ul.home-menu-desktop {
     top: 27vw;
     left: 12vw;
   }
+
+  /*---------------------------FINE TUNING-------------------------------*/
+  @media (min-width: 768px) and (max-width: 991px) {
+
+    ul.home-menu-desktop {
+      top: 23%;
+      left: 38%;
+      gap: .3vw;
+    }
+
+    .home-menu-desktop-item a{
+      gap: .7em;
+    }
+
+    h5.home-menu-desktop-label, .triangle-icon {
+      font-size: .83em;
+    }
+}

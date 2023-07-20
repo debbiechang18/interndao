@@ -1,11 +1,10 @@
 import React from 'react';
 import { useMediaQuery } from 'react-responsive';
 import { Link, useLocation } from 'react-router-dom';
-import triangle from '../assets/triangle.png';
+import '../styles/NavigationMenu.css'
 
 const NavigationMenu = () => {
   return (
-    <div className="navigation-menu">
       <ul className="navigation-links link-text play-font">
         <CustomLink to="/">00 home</CustomLink>
         <CustomLink to="/interns">01 interns</CustomLink>
@@ -14,7 +13,6 @@ const NavigationMenu = () => {
         <CustomLink to="/research">04 research</CustomLink>
         <CustomLink to="/tools">05 tools</CustomLink>
       </ul>
-    </div>
   );
 };
 
@@ -26,17 +24,17 @@ function CustomLink({ to, children, ...props }) {
     (location.pathname.startsWith(to + '/') && to !== '/');
 
   return isMobile ? ( 
-    <li className={`nav-links ${isActive ? 'active' : 'inactive'}`}>
-      <img src={triangle} alt="triangle" id="nav-triangle" />
-      <Link to={to} {...props}>
-        {children}
+    <li className={`nav-item ${isActive ? 'active' : 'inactive'}`}>
+      <Link className="nav-link" to={to} {...props}>
+      <h5 className="triangle-icon-nav">&#9654;</h5>
+      <h5 className="link-label">{children}</h5>
       </Link>
     </li>
   ) : (
-    <li className={`nav-links ${isActive ? 'active' : 'inactive'}`}>
-      <img src={triangle} alt="triangle" id="nav-triangle" />
-      <Link to={to} {...props}>
-        {children}
+    <li className={`nav-item ${isActive ? 'active' : 'inactive'}`}>
+      <Link className="nav-link" to={to} {...props}>
+        <h5 className="triangle-icon-nav">&#9654;</h5>
+        <h5 className="link-label">{children}</h5>
       </Link>
     </li>
   );

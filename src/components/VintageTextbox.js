@@ -34,7 +34,7 @@ const VintageTextbox = () => {
           <button>X</button>
         </div>
         <div className="textbox-body">
-            <ReactMarkdown>{philosophyText}</ReactMarkdown>
+            <ReactMarkdown className="trispace-font">{philosophyText}</ReactMarkdown>
         </div>
         <button className="ok-button">
           <img className="ok-emoji" src={okEmoji} alt="ok emoji" />

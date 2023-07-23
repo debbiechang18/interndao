@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import "../styles/VintageTextbox.css";
 import okEmoji from "../assets/ok-button.png";
 import axios from "axios";
+import { ReactMarkdown } from "react-markdown/lib/react-markdown";
 
 const VintageTextbox = () => {
   const [philosophyText, setPhilosophyText] = useState("");
@@ -32,7 +33,9 @@ const VintageTextbox = () => {
           <p className="philosophy-title play-font">philosophy</p>
           <button>X</button>
         </div>
-        <div className="textbox-body">{philosophyText}</div>
+        <div className="textbox-body">
+            <ReactMarkdown>{philosophyText}</ReactMarkdown>
+        </div>
         <button className="ok-button">
           <img className="ok-emoji" src={okEmoji} alt="ok emoji" />
         </button>

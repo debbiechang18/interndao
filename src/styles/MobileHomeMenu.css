@@ -6,11 +6,12 @@ ul.mobile-home-menu {
 
 a.mobile-home-link {
     text-decoration: none;
-    color: var(--yellow);
+    color: var(--aqua);
     display: flex;
     gap: 1em;
 }
 
 .mobile-home-link > h5 {
-    font-weight: 300
+    font-weight: 300;
+    font-size: max(1em, 3vw);
 }

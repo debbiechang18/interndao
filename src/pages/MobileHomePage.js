@@ -4,7 +4,7 @@ import React from 'react'
 import '../styles/MobileHomePage.css'
 import { Link } from "react-router-dom"
 import VintageTextbox from "../components/VintageTextbox"
-import HomeMenu from '../components/HomeMenu'
+import MobileHomeMenu from '../components/MobileHomeMenu'
 
 
 const MobileHomePage = () => {
@@ -16,7 +16,7 @@ const MobileHomePage = () => {
             <h6 className="trispace-font">DAO's</h6>
           </div>
        <div className="home-menu-container">
-        <HomeMenu />
+        <MobileHomeMenu />
        </div>
         <div className="philosophy-container">
           <VintageTextbox />

@@ -21,20 +21,6 @@
   
   
   /*--------------------------LOGO---------------------------*/
-  .desktop-logo-home {
-    width: 100%;
-    grid-area: logo;
-    display: flex;
-    align-items: center;  
-    gap: 1vw;
-    position: relative;
-    left: 10vw;
-  }
-
-  .desktop-logo-home > .desktopLogoHome {
-    width: 30vw;
-  }
-
   .desktop-logo {
     width: 100%;
     grid-area: logo;
@@ -42,15 +28,12 @@
     align-items: center;  
     gap: 1vw;
     position: relative;
-    left: 10vw;
+    left: 5vw;
   }
-
-  .desktop-logo-home > .desktopLogo {
-    width: 5vw;
+  
+  .desktop-logo.hidden > .desktopLogoText {
+    visibility: hidden;
   }
-
-
-
 
   /*--------------------------PINK TRACK---------------------------*/
   

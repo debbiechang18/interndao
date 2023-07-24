@@ -23,3 +23,9 @@ ul.navigation-links {
 .inactive > .nav-link > .triangle-icon-nav {
     visibility: hidden;;
 }
+
+@media (max-width: 767px) {
+    .nav-link > h5 {
+        font-size: max(1em, 3vw);
+    }
+}

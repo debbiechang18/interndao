@@ -11,7 +11,7 @@ a.mobile-home-link {
     gap: 1em;
 }
 
-.mobile-home-link > h5 {
+.mobile-home-link > h4 {
     font-weight: 300;
-    font-size: max(1em, 3vw);
+    font-size: max(1.15em, 3vw);
 }

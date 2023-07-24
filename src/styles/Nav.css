@@ -21,26 +21,36 @@
   
   
   /*--------------------------LOGO---------------------------*/
+  .desktop-logo-home {
+    width: 100%;
+    grid-area: logo;
+    display: flex;
+    align-items: center;  
+    gap: 1vw;
+    position: relative;
+    left: 10vw;
+  }
+
+  .desktop-logo-home > .desktopLogoHome {
+    width: 30vw;
+  }
+
   .desktop-logo {
     width: 100%;
     grid-area: logo;
     display: flex;
     align-items: center;  
     gap: 1vw;
+    position: relative;
+    left: 10vw;
   }
-  
-  .logo-icon {
+
+  .desktop-logo-home > .desktopLogo {
     width: 5vw;
   }
 
-  .logo-text {
-    width: 20vw;
-  }
-  
-  .hide {
-    display: none;
-  }
-  
+
+
 
   /*--------------------------PINK TRACK---------------------------*/
   

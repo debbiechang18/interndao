@@ -24,9 +24,9 @@ const MobileHomePage = () => {
   return (
     <div className="mobile-home-page-container">
       <div className="dao-handshake" id="dao-handshake-mobile">
-        <h5 className="trispace-font">DAO's</h5>
+        <h3 className="trispace-font">DAO's</h3>
         <span role="img" aria-label="coffee emoji" className="inline-emoji">&#x1F91D;</span> 
-        <h5 className="trispace-font">DAO's</h5>
+        <h3 className="trispace-font">DAO's</h3>
       </div>
       <div className="home-menu-container">
         <MobileHomeMenu />

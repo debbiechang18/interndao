@@ -1,50 +1,37 @@
 import React from "react";
-// import { useMediaQuery } from "react-responsive";
+import { Link } from "react-router-dom"
+import "../styles/MobileHomeMenu.css"
 
-const HomeMenu = () => {
-
-    // const isMobile = useMediaQuery({maxWidth: 767});
+const MobileHomeMenu = () => {
 
  return (
-    <></>
-//     <div className="home-menu-container">
-//         <ul className="home-menu trispace-font">
-//             <li>
-//                 <Link className="home-link trispace-font" to="/interns">
-//                 {isMobile ? (
-//                     <span role="img" aria-label="coffee emoji" className="emoji-bullet">&#x2615;</span>
-//                 ) : (
-//                     <img src={triangle} className="home-triangle" alt="yellow triangle"/>
-//                 )}
-//                 meet the interns
-//                 {isMobile && (<FontAwesomeIcon icon={faAngleRight} />)}
-//                 </Link>
-//             </li>
-//             <li>
-//                 <Link className="home-link trispace-font" to="/apply">
-//                 {isMobile ? (
-//                     <span role="img" aria-label="rocket emoji" className="emoji-bullet">&#x1F680;</span>
-//                 ) : (
-//                     <img src={triangle} className="home-triangle" alt="yellow triangle"/>
-//                 )}
-//                 apply to be an intern
-//                 {isMobile && (<FontAwesomeIcon icon={faAngleRight} />)}
-//                 </Link>
-//             </li>
-//             <li>
-//                 <Link className="home-link trispace-font" to="/consulting">
-//                 {isMobile ? (
-//                     <span role="img" aria-label="target emoji" className="emoji-bullet">&#x1F3AF;</span>
-//                 ) : (
-//                     <img src={triangle} className="home-triangle" alt="yellow-triangle"/>
-//                 )} learn about services
-//                 {isMobile && (<FontAwesomeIcon icon={faAngleRight} />)}
-//                 </Link>
-//             </li>
-//         </ul>
-// </div>
+    <>
+        <ul className="mobile-home-menu">
+            <li className="mobile-home-menu-item">
+                <Link className="mobile-home-link" to="/interns">
+                    <span role="img" aria-label="coffee emoji" className="emoji-bullet">&#x2615;</span>
+                    <h5 className="trispace-font">meet the interns</h5>
+                    {/* <FontAwesomeIcon icon={faAngleRight} /> */}
+                </Link>
+            </li>
+            <li className="mobile-home-menu-item">
+                <Link className="mobile-home-link" to="/apply">
+                    <span role="img" aria-label="rocket emoji" className="emoji-bullet">&#x1F680;</span>
+                    <h5 className="trispace-font">apply to be an intern</h5>
+                    {/* <FontAwesomeIcon icon={faAngleRight} /> */}
+                </Link>
+            </li>
+            <li className="mobile-home-menu-item">
+                <Link className="mobile-home-link" to="/consulting">
+                    <span role="img" aria-label="target emoji" className="emoji-bullet">&#x1F3AF;</span>
+                    <h5 className="trispace-font">learn about services</h5>
+                    {/* <FontAwesomeIcon icon={faAngleRight} /> */}
+                </Link>
+            </li>
+        </ul>
+</>
 
  )   
 }
 
-export default HomeMenu
+export default MobileHomeMenu

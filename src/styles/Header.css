@@ -1,0 +1,23 @@
+.header-container {
+    height: 20vw;
+}
+.hamburger-icon, .hamburger-icon-img {
+    height: 3.5em;
+    width: 3.5em;
+    position: fixed;
+    right: 5vw;
+    top: 5vw;
+    z-index: 999;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+.header-container > .mobile-logo {
+    width: min(20em, 50vw);
+    max-height: 20vw;
+    position: relative;
+    top: 4vw;
+    left: 4vw;
+}

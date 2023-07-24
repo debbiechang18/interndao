@@ -10,8 +10,10 @@ import HomeMenu from '../components/HomeMenu'
 const MobileHomePage = () => {
     return (
       <div className="mobile-home-page-container">
-          <div className="trispace-font dao-handshake" id="dao-handshake-mobile">
-            DAO's <span role="img" aria-label="coffee emoji" className="inline-emoji">&#x1F91D;</span> DAO's
+          <div className="dao-handshake" id="dao-handshake-mobile">
+            <h6 className="trispace-font">DAO's</h6>
+            <span role="img" aria-label="coffee emoji" className="inline-emoji">&#x1F91D;</span> 
+            <h6 className="trispace-font">DAO's</h6>
           </div>
        <div className="home-menu-container">
         <HomeMenu />

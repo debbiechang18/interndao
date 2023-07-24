@@ -36,8 +36,14 @@
       "footer";
   }
 
+  .main-head {
+    height: 20vw;
+  }
+
   .content {
       width: 100vw;
+      height: 100vh;
+      overflow-y: scroll;
       margin-bottom: 20vw;
   }
 

@@ -1,0 +1,16 @@
+ul.mobile-home-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+a.mobile-home-link {
+    text-decoration: none;
+    color: var(--yellow);
+    display: flex;
+    gap: 1em;
+}
+
+.mobile-home-link > h5 {
+    font-weight: 300
+}

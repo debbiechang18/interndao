@@ -17,7 +17,7 @@
         gap: 1em;
     }
 
-    #dao-handshake-mobile > h6,
+    #dao-handshake-mobile > h5,
     #dao-handshake-mobile > .inline-emoji  {
         font-size: max(1.5em, 5vw);
     }
@@ -31,6 +31,28 @@
         position: relative;
         width: 85vw;
         height: 85vw;
+    }
+
+    .contact-info-container-mobile {
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+    }
+
+    .contact-info-mobile {
+        color: var(--yellow);
+        display: flex;
+        align-items: center;
+        gap: 1em;
+    }
+
+    .contact-info-mobile > .emoji-bullet {
+        font-size: 2em;
+    }
+
+    .contact-info-text {
+        font-size: max(1em, 3vw);
+        font-weight: 400;
     }
 
 

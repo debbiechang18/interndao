@@ -10,12 +10,12 @@ const HamburgerMenu = ({ isOpen, onCloseMenu }) => {
 
   return (
     <>
-      {isOpen ?? 
-        <div
-          className={`dark-overlay ${isOpen ? "visible" : ""}`}
-          onClick={closeMenu}>
-        </div>
-      }
+
+      <div
+        className={`dark-overlay ${isOpen ? "visible" : "hidden"}`}
+        onClick={closeMenu}>
+      </div>
+
       <div
         className={`hamburger-menu-container ${isOpen ? "open" : "closed"}`}
       >

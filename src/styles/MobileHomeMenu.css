@@ -8,7 +8,7 @@ a.mobile-home-link {
     text-decoration: none;
     color: var(--aqua);
     display: flex;
-    gap: 1em;
+    gap: 2em;
     display: flex;
     align-items: center;
 }
@@ -16,12 +16,16 @@ a.mobile-home-link {
 .mobile-home-link > h4, 
 .emoji-bullet {
     font-weight: 300;
-    font-size: max(1em, 3vw);
+    font-size: max(1em, 3.5vw);
 }
  
 /*--------------------- FINE TUNING ---------------------------*/
 @media (max-width: 400px) {
     .right-chevron {
         display: none;
+    }
+
+    ul.mobile-home-menu {
+        padding: 0;
     }
 }

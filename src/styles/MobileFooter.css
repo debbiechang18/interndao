@@ -14,7 +14,7 @@
         flex-direction: column;
         align-items: center;
         gap: 3em;
-        font-size: max(1em, 2.5vw);
+        font-size: max(1em, 3vw);
     }
     
     .mobile-footer-heading {

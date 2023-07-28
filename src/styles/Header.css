@@ -1,6 +1,9 @@
 .header-container {
     height: 20vw;
+    width: 100vw;
+    display: flex;
 }
+
 .hamburger-icon, .hamburger-icon-img {
     height: 3.5em;
     width: 3.5em;
@@ -14,10 +17,16 @@
     display: none;
 }
 
-.header-container > .mobile-logo {
+.logo-link {
+    display: block;
+    height: 20vw;
+    width: max-content;
+}
+
+.logo-link > .mobileLogo {
     width: min(20em, 50vw);
     max-height: 20vw;
-    position: relative;
+    position: absolute;
     top: 4vw;
     left: 4vw;
 }

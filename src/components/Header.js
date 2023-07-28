@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom"
 import HamburgerMenu from "./HamburgerMenu";
 import "../styles/Header.css";
 import hamburgerIcon from "../assets/burger.png";
@@ -13,7 +14,7 @@ const Header = () => {
 
   return (
     <div className="header-container">
-      <GetLogo logoType="mobileLogo" alt="logo" />
+      <Link className="logo-link" to="/"><GetLogo logoType="mobileLogo" alt="logo" /></Link>
       <span
         className={`hamburger-icon ${menuOpen ? "menu-open" : ""}`}
         onClick={toggleMenu}

@@ -9,9 +9,19 @@ a.mobile-home-link {
     color: var(--aqua);
     display: flex;
     gap: 1em;
+    display: flex;
+    align-items: center;
 }
 
-.mobile-home-link > h4 {
+.mobile-home-link > h4, 
+.emoji-bullet {
     font-weight: 300;
-    font-size: max(1.15em, 3vw);
+    font-size: max(1em, 3vw);
+}
+ 
+/*--------------------- FINE TUNING ---------------------------*/
+@media (max-width: 400px) {
+    .right-chevron {
+        display: none;
+    }
 }

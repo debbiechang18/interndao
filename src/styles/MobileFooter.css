@@ -1,0 +1,68 @@
+@media (max-width: 767px) {
+    .mobile-footer {
+        width: 100vw;
+        background-color: var(--dark-solid);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10vh;
+        padding: 10vh 0;
+    }
+    
+    .mobile-footer-links {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 3em;
+        font-size: max(1em, 2.5vw);
+    }
+    
+    .mobile-footer-heading {
+        color: var(--fuschia);
+    }
+    
+    /*gap between icons*/
+    .mobile-footer-icons-container {
+        display: flex;
+        gap: 2em;
+    }
+    
+    .footer-icons-mobile {
+        font-family: "Font Awesome 5 Brands";
+        font-weight: 200;
+        font-style: normal;
+        font-size: 2em;
+        color: var(--yellow);
+    }
+    
+    .logo-mission-container-mobile {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2em;
+    }
+
+    .footer-text-mobile {
+        color: white;
+        width: 50vw;
+        font-size: max(1em, 3vw);
+        text-align: center;
+    }
+
+    .legal-links-mobile,
+    .copyright-text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2em;
+        text-align: center;
+    }
+
+    .mobile-link-sm, .copyright-text {
+        color: var(--yellow);
+        font-weight: 300;
+        font-size: max(1em, 3vw);
+    }
+    
+}

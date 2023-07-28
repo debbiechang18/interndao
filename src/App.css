@@ -38,13 +38,20 @@
 
   .main-head {
     height: 20vw;
+    width: 100vw;
   }
 
   .content {
       width: 100vw;
-      height: 100vh;
-      overflow-y: scroll;
-      margin-bottom: 20vw;
+      margin-bottom: 10vh;
+  }
+
+  .home-content {
+    margin-bottom: 0;
+  }
+
+  .footer {
+    width: 100vw;
   }
 
 }

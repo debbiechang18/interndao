@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
-function GetLogo({ logoType = 'desktopLogo' }) {
+function GetLogo({ logoType}) {
   const [logoData, setLogoData] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
 

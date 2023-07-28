@@ -12,6 +12,8 @@
       ".  . dao-handshake"
       "pink-track pink-track pink-track"
       "contact-info-container . .";
+
+      gap: 5em 0;
   }
   
   .nav-container > * {
@@ -22,19 +24,28 @@
   
   /*--------------------------LOGO---------------------------*/
   .desktop-logo {
-    width: 100%;
+    width: 40vw;
+    margin: 2vw 5vw;
     grid-area: logo;
     display: flex;
     align-items: center;  
     gap: 1vw;
-    position: relative;
+    /* position: relative;
     left: 5vw;
+    top: 3vw; */
   }
   
   .desktop-logo.hidden > .desktopLogoText {
     visibility: hidden;
   }
 
+  .desktopLogo {
+    width: 10vw;
+  }
+
+  .desktopLogoText {
+    width: 30vw;
+  }
   /*--------------------------PINK TRACK---------------------------*/
   
   .pink-track {

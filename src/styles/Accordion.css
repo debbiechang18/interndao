@@ -1,0 +1,201 @@
+input[name='panel'] {
+  display: none;
+}
+
+.accordion-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10vh;
+  transition-duration: 0.4s;
+  overflow: scroll;
+
+}
+
+
+.accordion-header {
+  padding: 1em 0;
+  height: max-content;
+  color: white;
+  background: transparent;
+  text-transform: lowercase;
+  font-size: max(.9/em, 1.2vw);
+  line-height: 1em;
+  cursor: pointer;
+  padding: 0;
+}
+
+.accordion-header-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  z-index: 990;
+  
+}
+
+.accordion-label {
+  white-space: nowrap;
+  margin: 1em 2em 1em 0 ;
+  z-index: 989;
+}
+
+.accordion-section-content {
+  display: flex; 
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 1.5em;
+}
+
+.divider-line { 
+  height: 3px;
+  width: 90%;
+  box-shadow: 0 0 7px 0px hwb(0 70% 0%);
+}
+
+.dot {
+  display: inline-block;
+  min-height: 15px;
+  min-width: 15px;
+  border-radius: 100%;
+  box-sizing: border-box;
+  box-shadow: 0 0 7px 0px hwb(0 70% 0%);
+}
+
+.collapsible {
+  display: block;
+  width: 100%;
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 5000s ease;
+}
+
+.collapsible.active {
+  max-height: 10000vh;
+  transition: max-height 5s ease;
+}
+
+
+
+/* ==========================COLORS============================ */
+  
+.panel_1 > .accordion-header,
+.panel_5 > .accordion-header, 
+.panel_1 > .username,
+.panel_5 > .username, 
+.panel_1 > .thumbnail-photo,
+.panel_5 > .thumnail-photo {
+  color: var(--fuschia);
+}
+
+.panel_1 > .dot,
+.panel_5 > .dot, 
+.panel_1 > .divider-line,
+.panel_5 > .divider-line {
+  background-color: var(--fuschia);
+}
+
+.panel_2 > .accordion-header,
+.panel_6 > .accordion-header, 
+.panel_2 > .username,
+.panel_6 > .username, 
+.panel_2 > .thumbnail-photo,
+.panel_6 > .thumnail-photo {
+  color: var(--light-blue);
+}
+
+.panel_2 > .dot,
+.panel_6 > .dot, 
+.panel_2 > .divider-line,
+.panel_6 > .divider-line {
+  background-color: var(--light-blue);
+}
+
+.panel_3 > .accordion-header,
+.panel_7 > .accordion-header,
+.panel_3 > .username,
+.panel_7 > .username, 
+.panel_3 > .thumbnail-photo,
+.panel_7 > .thumnail-photo {
+  color: var(--yellow);
+}
+
+.panel_3 > .dot,
+.panel_7 > .dot, 
+.panel_3 > .divider-line,
+.panel_7 > .divider-line {
+  background-color: var(--yellow);
+}
+
+.panel_4 > .accordion-header,
+.panel_8 > .accordion-header, 
+.panel_4 > .username,
+.panel_8 > .username, 
+.panel_4 > .thumbnail-photo,
+.panel_8 > .thumnail-photo {
+  color: var(--violet);
+}
+
+.panel_4 > .dot,
+.panel_8 > .dot, 
+.panel_4 > .divider-line,
+.panel_8 > .divider-line {
+  background-color: var(--violet);
+}
+
+/* ==========================MOBILE============================ */
+
+@media (max-width: 767px) {
+
+  .accordion-container {
+    margin-top: 5vh;
+  }
+
+  .accordion-header {
+    height: max-content;
+    margin-left: 2em;
+    margin-top: 0;
+  }
+
+  .collapsible {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .accordion-label {
+    margin: 0;
+    padding: 1em;
+  }
+
+  .accordion-section-content {
+    display: flex;
+    justify-content: center;
+    row-gap: 0;
+    column-gap: 1em;
+    flex-wrap: wrap;
+  }
+
+  .accordion-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+}
+
+/* ==========================DESKTOP============================ */
+
+
+@media (min-width: 768px) {
+  .accordion-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .collapsible {
+    margin: 1vh 0;
+  }
+}

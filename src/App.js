@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Route, Routes, useLocation } from "react-router-dom";
 import "./App.css";
 import "./index.css";
@@ -13,12 +13,20 @@ import Research from "./pages/Research";
 import Tools from "./pages/Tools";
 import ProfilePage from "./components/ProfilePage";
 import { useMediaQuery } from "react-responsive";
+import TermsOfService from "./pages/TermsOfService";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+import InformationSecurity from "./pages/InformationSecurity";
 
 const App = () => {
   const location = useLocation();
   const isHomePage = location.pathname === "/";
   const isMobile = useMediaQuery({ maxWidth: 767 });
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  useEffect(() => {
+    // Scroll to the top of the page whenever the location changes
+    window.scrollTo(0, 0);
+  }, [location]);
 
 
   const toggleMenu = () => {
@@ -52,6 +60,9 @@ const App = () => {
           <Route path="/research" element={<Research />} />
           <Route path="/tools" element={<Tools />} />
           <Route path="/interns/:username" element={<ProfilePage />} />
+          <Route path="/terms-of-service" element={<TermsOfService />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="/information-security-statement" element={<InformationSecurity />} />
         </Routes>
       </article>
 

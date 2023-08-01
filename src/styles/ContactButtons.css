@@ -122,7 +122,7 @@
   }
 
   .contact-page-button {  
-    width: 20em;
+    width: max(18em, 40vw);
     height: 5em;
     font-size: 1em;
   }

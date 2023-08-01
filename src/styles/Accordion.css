@@ -7,8 +7,7 @@ input[name='panel'] {
   flex-direction: column;
   margin-top: 5vw;
   transition: transform 0.4s;
-  overflow: scroll;
-
+  overflow: auto;
 }
 
 
@@ -193,7 +192,7 @@ input[name='panel'] {
   .accordion-label {
     margin: 0;
     padding: 1em;
-    font-size: .7em;
+    font-size: max(.7em, 2vw)
   }
 
   .accordion-section-content {

@@ -4,6 +4,7 @@
   --yellow: #F7D824;
   --violet: #9672FF;
   --aqua: #05EAFF;
+  --aqua-transparent: rgba(5, 234, 255, .5);
   --dark-solid: #120D1B;
   --dark-transparent: rgba(47,35,66,.7); 
   --fuschia-semi-transparent: rgba(206, 4, 162, .8);

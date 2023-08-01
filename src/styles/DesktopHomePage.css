@@ -96,4 +96,13 @@
     h5.home-menu-desktop-label, .triangle-icon {
       font-size: .83em;
     }
+
+        
+    .philosophy-container {
+      position: absolute;
+      width: max(290px, 22vw);
+      height: max(290px, 22vw);
+      top: 27vw;
+      left: 25vw;
+    }
 }

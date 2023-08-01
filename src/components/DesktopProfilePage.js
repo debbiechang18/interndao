@@ -21,8 +21,11 @@ const DesktopProfilePage = ({ intern }) => {
     const instagramUrl = intern?.attributes?.instagram ? `https://instagram.com/${intern?.attributes?.twitter}` : null;
 
     const website = intern?.attributes?.website
+    const websiteUrl = intern?.attributes?.website ? `https://${intern?.attributes?.website}` : null;
 
     const link2 = intern?.attributes?.link2
+    const link2Url = intern?.attributes?.link2 ? `https://${intern?.attributes?.link2}` : null;
+
 
     const userBio = intern?.attributes?.bio
 
@@ -49,13 +52,13 @@ const DesktopProfilePage = ({ intern }) => {
                     </a>
                     )}               
                     {website && (
-                    <a href={ website } className="social-link">
+                    <a href={ websiteUrl } className="social-link">
                         <img className="link-icon" src={linkIcon} alt="link-icon" />
                         <h5 className="play-font link-text">{website}</h5>
                     </a>
                     )}   
                     {link2 && (
-                    <a href={ link2 } className="social-link">
+                    <a href={ link2Url } className="social-link">
                         <img className="link-icon" src={linkIcon} alt="link-icon"/>
                         <h5 className="play-font link-text">{link2}</h5>
                     </a>

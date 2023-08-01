@@ -43,6 +43,10 @@
         gap: 2em;
     }
 
+    .footerLogo {
+        width: max(5em, 25vw);
+    }
+
     .footer-text-mobile {
         color: white;
         width: 50vw;

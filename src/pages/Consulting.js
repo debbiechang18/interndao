@@ -4,7 +4,6 @@ import useConsultingData from "../functions/ConsultingData";
 
 const Consulting = ({ activePanel }) => {
   const { consultingData, loading, error } = useConsultingData();
-  console.log(consultingData)
 
   if (loading) {
     return <div>Loading...</div>; // Show a loading indicator if data is not ready yet

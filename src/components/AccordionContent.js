@@ -6,7 +6,7 @@ import ContactButtons from './ContactButtons';
 import ConsultingPost from './ConsultingPost';
 import '../styles/Accordion.css';
 
-const FILLER_IMAGE_URL = 'logo512.png';
+const FILLER_IMAGE_URL = 'logo-icon-pink.svg';
 
 const AccordionContent = ({ items, index }) => {
   // Retrieve the location object using the useLocation hook
@@ -80,7 +80,6 @@ const AccordionContent = ({ items, index }) => {
               break;
             case '/contact':
               const buttonData = buttonDataMapping[section]; // Get the button data for this section
-              console.log("buttondata", buttonData)
               if (buttonData) {
                 renderedItem = (
                   <ContactButtons section={section} buttonID={buttonData.buttonID} key={i} />

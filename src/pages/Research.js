@@ -1,31 +1,29 @@
-import React, { useState } from "react";
-import "../styles/Research.css";
+import React, { useState, useEffect } from "react";
 import CardList from '../components/CardList';
 import axios from "axios";
 
 const Research = () => {
   const itemsPerPage = 8; // Number of research cards to display per page
-  const [currentPage, setCurrentPage] = useState(1);
-
-  const handlePageChange = (page) => {
-    setCurrentPage(page);
-  };
+  const [researchData, setResearchData] = useState([]); // State to store the fetched research data
 
   useEffect(() => {
-    const apiUrl = "https://strapi-production-5302.up.railway.app/api/philosophy-text";
+    // Scrolls to the top of the page with x and y coordinates both set to 0
+    window.scrollTo(0, 0);
+  }, []);
+
+  useEffect(() => {
+    const apiUrl = "https://strapi-production-5302.up.railway.app/api/research-posts?populate=*";
 
     axios
       .get(apiUrl)
       .then((response) => {
-        // handle API response data
-        const philosophyTextData = response.data.data.attributes.text;
-        setPhilosophyText(philosophyTextData);
+        // Set the researchData state with the fetched data
+        setResearchData(response.data.data);
       })
       .catch((error) => {
-        console.error("Error fetching philosophy text:", error);
+        console.error("Error fetching research data:", error);
       });
-  }, []);
-
+  }, []); // The empty dependency array ensures this effect runs only once when the component mounts
 
   return (
     <div>

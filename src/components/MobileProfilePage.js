@@ -4,7 +4,7 @@ import linkIcon from '../assets/link-icon.png'
 import { ReactMarkdown } from "react-markdown/lib/react-markdown";
 
 // Define the URL for the filler image
-const FILLER_IMAGE_URL = 'logo512.png';
+const FILLER_IMAGE_URL = 'logo-icon-pink.png';
 
 const MobileProfilePage = ({ intern }) => {
 

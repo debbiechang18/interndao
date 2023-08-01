@@ -1,19 +1,24 @@
 import React, { useState } from 'react';
-import { useLocation } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import ResearchCard from './ResearchCard';
-import ToolsCard from './ToolsCard';
 import '../styles/CardList.css';
 
 const CardList = ({ data, itemsPerPage }) => {
-  const location = useLocation();
+  console.log(data)
+  const FILLER_IMAGE_URL = "logo512.png"
   let ActiveCard = ResearchCard; // Default to ResearchCard
-
-  if (location.pathname === '/tools') {
-    ActiveCard = ToolsCard;
-  }
 
   const [currentPage, setCurrentPage] = useState(1);
   const totalPages = Math.ceil(data.length / itemsPerPage);
+
+    
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+  };
+  
 
   const getPageData = () => {
     const startIndex = (currentPage - 1) * itemsPerPage;
@@ -35,14 +40,7 @@ const CardList = ({ data, itemsPerPage }) => {
     setCurrentPage(pageNumber);
     scrollToTop(); // Scroll to top of the page with smooth scrolling
   };
-  
-  const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth',
-    });
-  };
-  
+
 
   const renderPaginationNumbers = () => {
     const paginationNumbers = [];
@@ -63,16 +61,19 @@ const CardList = ({ data, itemsPerPage }) => {
   };
 
   return (
+    <div className="card-list-container">
     <div className="card-list">
       {getPageData().map((item, index) => (
-        <ActiveCard
-          key={index}
-          title={item.title}
-          image={item.image}
-          subtitle={item.subtitle}
-          url={item.url}
-          text={item.text}
-        />
+        <Link to={item.attributes.url}>
+          <ActiveCard
+            key={index}
+            title={item.attributes.title || ""}
+            image={item.attributes.thumbnail?.data?.attributes?.url || FILLER_IMAGE_URL}
+            subtitle={item.attributes.subtitle || ""}
+            url={item.attributes.url || "#"}
+            text={item.attributes.text || ""}
+          />
+        </Link>
       ))}
       <div className="pagination-buttons">
         <button onClick={handlePreviousPage} disabled={currentPage === 1}>
@@ -83,6 +84,7 @@ const CardList = ({ data, itemsPerPage }) => {
           &gt;
         </button>
       </div>
+    </div>
     </div>
   );
 };

@@ -5,6 +5,7 @@ const useConsultingData = () => {
   const [consultingData, setConsultingData] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const FILLER_IMAGE_URL = "logo-icon-pink.svg";
 
   useEffect(() => {
     const fetchConsultingData = async () => {
@@ -22,7 +23,7 @@ const useConsultingData = () => {
             {
               type: 'card',
               clientName: item.attributes.clientName,
-              thumbnail: item.attributes.photo.data.attributes.formats.thumbnail.url,
+              thumbnail: item.attributes.photo.data.attributes.formats.thumbnail.url || FILLER_IMAGE_URL,
               section: item.attributes.section
           }
         }));

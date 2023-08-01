@@ -47,11 +47,13 @@
     right: 5px;
     top: 4px;
     height: 1.5em;
+    font-family: verdana;
     font-size: 1em;
     font-weight: bold;
     text-align: center;
     color: #808080;
     box-shadow: inset 1px 1px #dfdfdf, inset -1px -1px gray;
+    border-radius: 0;
   }
   
   .ok-button {

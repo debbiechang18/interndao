@@ -98,7 +98,9 @@ const AccordionContent = ({ items, index }) => {
         {location.pathname === '/consulting' &&
           Object.entries(consultingPostsBySection).map(([section, consultingPosts]) => (
             <div key={section} className="consulting-posts-container">
+              <div className="consulting-posts-wrapper">
               {consultingPosts}
+              </div>
             </div>
           ))}
       </div>

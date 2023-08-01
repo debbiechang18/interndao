@@ -6,9 +6,14 @@ ul.navigation-links {
 }
 
 .nav-link {
+    height: max-content;
     display: flex;
     align-items: center;
     gap: 1em;
+}
+
+.triangle-icon-nav {
+    height: max(1em, 1vw);
 }
 
 .triangle-icon-nav, .link-label {
@@ -17,7 +22,7 @@ ul.navigation-links {
 
 .active > .nav-link > h5,
 .nav-link > h5:hover {
-    color: var(--yellow)
+    color: var(--yellow);
 }
 
 .inactive > .nav-link > .triangle-icon-nav {
@@ -25,7 +30,9 @@ ul.navigation-links {
 }
 
 @media (max-width: 767px) {
-    .nav-link > h5 {
+    .nav-link > h5,
+    .triangle-icon-nav {
         font-size: max(1em, 3vw);
+        height: max(1em, 3vw);
     }
 }

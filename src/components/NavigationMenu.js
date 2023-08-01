@@ -2,6 +2,7 @@ import React from 'react';
 import { useMediaQuery } from 'react-responsive';
 import { Link, useLocation } from 'react-router-dom';
 import '../styles/NavigationMenu.css'
+import triangle from '../assets/triangle.svg'
 
 const NavigationMenu = ({ onCloseMenu }) => {
   const isMobile = ({maxWidth: 768});
@@ -34,7 +35,7 @@ function CustomLink({ to, children, onCloseMenu, ...props }) {
   return (
     <li className={`nav-item ${isActive ? 'active' : 'inactive'}`}>
       <Link className="nav-link" to={to} {...props} onClick={handleClick}>
-        <h5 className="triangle-icon-nav">&#9654;</h5>
+        <img src={triangle} alt="yellow triangle icon" className="triangle-icon-nav"></img>
         <h5 className="link-label">{children}</h5>
       </Link>
     </li>

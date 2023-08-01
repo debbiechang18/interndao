@@ -52,8 +52,8 @@
     font-weight: bold;
     text-align: center;
     color: #808080;
-    box-shadow: inset 1px 1px #dfdfdf, inset -1px -1px gray;
-    border-radius: 0;
+    box-shadow: inset 1px 1px #dfdfdf, inset -1px -1px gray !important;
+    border-radius: 0 !important;
   }
   
   .ok-button {

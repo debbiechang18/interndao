@@ -11,7 +11,7 @@
       }
     
       .profile-wrapper {
-        width: 80vw;
+        width: 75vw;
         background: radial-gradient(closest-side, rgba(16, 12, 28, .9) 40%, rgba(255, 255, 255, 0.07) 90%);
         backdrop-filter: blur(10px);
         border-radius: 10px;
@@ -47,11 +47,11 @@
     
       i.social-icons {
         color: var(--yellow);
-        font-size: 2em;
+        font-size: max(1.5em, 5vw);
       }
     
       img.link-icon {
-        height: 2em;
+        height: max(1.5em, 5vw);
       }
     
       .display-name, .role-title {
@@ -65,7 +65,7 @@
       }
     
       .awards-wrapper {
-        width: 80vw;
+        width: 75vw;
         padding: 2em;
         background: radial-gradient(closest-side, rgba(16, 12, 28, .9) 40%, rgba(255, 255, 255, 0.07) 90%);
         backdrop-filter: blur(10px);
@@ -77,16 +77,17 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        padding: 2em 0;
+        padding: 0;
       }
     
       .award-label {
+        display: flex;
+        flex-direction: column;
         text-align: center;
-        gap: 2em;
       }
     
       .trophy-emoji {
-        font-size: 2em;
+        font-size: max(1.5em, 6vw);
         position: absolute;
         left: 1em;
       }
@@ -134,7 +135,14 @@
         border: 3px solid var(--violet);
       }
       
-    
 
+  }
+
+  /*-------------------EXTRA SMALL SCREENS--------------------*/
+
+  @media(max-width: 441px) {
+    .award-label {
+      font-size: .75em;
+    }
 
   }

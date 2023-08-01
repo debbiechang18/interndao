@@ -67,7 +67,7 @@ const MobileProfilePage = ({ intern }) => {
                   <div className="user-award">
                     <span role="img" aria-label="trophy" className="trophy-emoji">&#x1F3C6;</span>
                     <div className="award-label">
-                        <h5 className="play-font award-date">{award.date}</h5><br />
+                        <h5 className="play-font award-date">{award.date}</h5>
                         <h5 className="play-font award-name">'{award.award}'</h5>
                     </div>
                   </div>

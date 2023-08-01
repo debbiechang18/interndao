@@ -1,0 +1,86 @@
+.tools-window {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 10vw 0;
+}
+
+.tools-card-container {
+    border: 2px var(--aqua) solid;
+    border-radius: 10px;
+    width: 80%;
+    height: auto;
+    padding: 10vw 2vw;
+    background: rgb(33, 22, 50);
+    background: radial-gradient(closest-side, rgba(33, 22, 50, 0.1) 0%, rgba(255, 255, 255, 0.1) 99%);
+    background-image: url("../assets/tools-thumbnail.png");
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2vh;
+  }
+
+  .tools-buttons-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2em;
+  }
+
+  .tools-link-button {  
+    height: 4em;
+    width: max-content;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    background-color: var(--dark-transparent);
+    color: var(--yellow); 
+    border: 2px solid var(--aqua);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 2em;
+    padding: 0 3vw;
+  }
+  
+  .tools-link-button:hover {
+    background-color: var(--aqua);
+    color: white;
+  }
+
+  /*--------------------MOBILE-------------------*/
+
+@media (max-width: 767px) {
+  .tools-window {
+    width: 100vw;
+    margin-top: 10vh;
+  }
+
+  .tools-card-container {
+    width: 80vw;
+  }
+
+  .tools-link-button {
+    font-size: 1em; 
+    white-space: nowrap;
+    display: flex;
+    justify-content: center;
+    gap: 3em;
+    padding-right: 4em;
+
+  }
+
+  }
+
+  @media (max-width: 441px) {
+  
+    .tools-link-button {
+      font-size: .83em; 
+      gap: 2em;
+      padding-right: 3em;
+    }
+  
+    }

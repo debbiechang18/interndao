@@ -1,0 +1,167 @@
+@media (min-width: 768px) and (max-width: 991px) {
+
+    .profile-page-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2vw;
+      width: 90%;
+      margin-top: 5vw;
+      height: max-content;
+    }
+  
+    .profile-wrapper {
+      background: radial-gradient(closest-side, rgba(16, 12, 28, .9) 40%, rgba(255, 255, 255, 0.07) 90%);
+      backdrop-filter: blur(10px);
+      border-radius: 10px;
+      height: max-content;
+      padding: 20px;
+      box-shadow: -1px .5px 2px 1px rgba(5, 234, 255, 1);
+      display: flex;
+      flex-direction: column;
+      gap: 2em;
+    }
+
+    .profile-heading {
+        height: 12em;
+        display: flex;
+        align-items: center;
+        gap: 1.5em;
+    }
+
+    .social-links {
+      display: flex;
+      justify-content: flex-start;
+      gap: 1.5em;
+    }
+  
+    a.social-link {
+      font-size: max(1em, 1vw);
+    }
+  
+    i.social-icons {
+      color: var(--yellow);
+      font-size: 1.5em;
+    }
+  
+    img.link-icon {
+      height: 1.5em;
+    }
+
+    .user-info {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5em;
+    }
+  
+    .display-name, .role-title {
+      text-transform: lowercase;
+    }
+
+    .display-name {
+        font-size: 1.5em;
+    }
+
+    .role-title {
+        font-size: .83em;
+    }
+  
+    .user-bio {
+      color: var(--aqua);
+      height: 80%;
+      overflow-y: scroll;
+      font-size: max(1em, 1.8vw);
+    }
+  
+    .awards-wrapper {
+      width: 100%;
+      background: radial-gradient(closest-side, rgba(16, 12, 28, .9) 40%, rgba(255, 255, 255, 0.07) 90%);
+      backdrop-filter: blur(10px);
+      border-radius: 10px;
+      box-shadow: -1px .5px 2px 1px rgba(5, 234, 255, 1);
+    }
+  
+    .user-award {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2em 0;
+    }
+  
+    .award-label {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: .5em;
+    }
+  
+    .trophy-emoji {
+      font-size: 3em;
+      position: absolute;
+      left: .5em;
+    }
+  
+    .award-label > h5 {
+      font-size: max(.83em, 1vw);
+      color: var(--yellow);
+    }
+  
+    /*--------------------------COLORS--------------------*/
+    .not-interns * h3, 
+    .not-interns * h5 {
+      color: var(--fuschia);
+    }
+  
+    .not-interns * .profile-img {
+      border: 3px solid var(--fuschia);
+    }
+  
+    .dao-heads * h3, 
+    .dao-heads * h5 {
+      color: var(--light-blue);
+    }
+  
+    .dao-heads * .profile-img {
+      border: 3px solid var(--light-blue);
+    }
+  
+    .sub-team-leads * h3, 
+    .sub-team-leads * h5 {
+      color: var(--yellow);
+    }
+  
+    .sub-team-leads * .profile-img {
+      border: 3px solid var(--yellow);
+    }
+  
+    .interns * h3, 
+    .interns * h5 {
+      color: var(--violet);
+    }
+  
+    .interns * .profile-img {
+      border: 3px solid var(--violet);
+    }
+  
+  }
+  
+  /* Hide the default scrollbar */
+  .user-bio::-webkit-scrollbar {
+    width: 2px; /* Set the width of the scrollbar */
+  }
+  
+  /* Track - the area behind the thumb */
+  .user-bio::-webkit-scrollbar-track {
+    background: var(--dark-transparent); /* Set the background color of the track */
+  }
+  
+  /* Thumb - the draggable scrolling handle */
+  .user-bio::-webkit-scrollbar-thumb {
+    background: var(--aqua-transparent); /* Set the color of the thumb */
+    border-radius: 10px; /* Add rounded corners to the thumb */
+  }
+  
+  /* On hover, the thumb color */
+  .user-bio::-webkit-scrollbar-thumb:hover {
+    background: var(--aqua);
+  }

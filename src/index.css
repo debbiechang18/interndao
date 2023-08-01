@@ -68,11 +68,12 @@ body {
   height: 100vh;
   margin: 0;
   padding: 0;
-  /* background-image: url('./assets/background.svg');
+  background-image: url('../public/background.png');
   background-attachment: fixed;
   background-position: top right;
   background-size: cover;
-  z-index: -1; */
+  background-repeat: repeat-y;
+  z-index: -1;
 }
 
 #background {
@@ -81,5 +82,6 @@ body {
   right: 0;
   width: 100%;
   background-size: cover;
+  background-repeat: repeat-y;
   z-index: -1;
 }

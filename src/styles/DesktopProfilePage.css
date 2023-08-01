@@ -1,3 +1,4 @@
+@media (min-width: 768px) {
 
 
   .profile-page-container {
@@ -122,3 +123,23 @@
   .dao-heads * .profile-img {
     border: 3px solid var(--light-blue);
   }
+
+  .sub-team-leads * h3, 
+  .sub-team-leads * h5 {
+    color: var(--yellow);
+  }
+
+  .sub-team-leads * .profile-img {
+    border: 3px solid var(--yellow);
+  }
+
+  .interns * h3, 
+  .interns * h5 {
+    color: var(--violet);
+  }
+
+  .interns * .profile-img {
+    border: 3px solid var(--violet);
+  }
+
+}

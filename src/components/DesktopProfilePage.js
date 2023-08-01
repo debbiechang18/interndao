@@ -1,5 +1,5 @@
 import React from "react";
-import '../styles/ProfilePage.css'
+import '../styles/DesktopProfilePage.css'
 import linkIcon from '../assets/link-icon.png'
 import { ReactMarkdown } from "react-markdown/lib/react-markdown";
 

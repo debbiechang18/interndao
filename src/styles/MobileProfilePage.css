@@ -1,0 +1,140 @@
+@media (max-width: 767px) {
+
+    .profile-page-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 3vw;
+        width: 100%;
+        margin-top: 5vw;
+        height: max-content;
+      }
+    
+      .profile-wrapper {
+        width: 80vw;
+        background: radial-gradient(closest-side, rgba(16, 12, 28, .9) 40%, rgba(255, 255, 255, 0.07) 90%);
+        backdrop-filter: blur(10px);
+        border-radius: 10px;
+        height: max-content;
+        padding: 4em 2em;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2em;        
+        box-shadow: 0px 1px 2px 1px var(--fuschia);
+
+      }
+    
+    
+      .profile-img {
+        width: 50vw;
+        height: 50vw;
+        border-radius: 20px;
+      }
+    
+      .social-links {
+        width: 50vw;
+        display: flex;
+        justify-content: space-evenly;
+        
+      }
+    
+      a.social-link {
+        display: flex;
+        align-items: center;
+        gap: 1em;
+      }
+    
+      i.social-icons {
+        color: var(--yellow);
+        font-size: 2em;
+      }
+    
+      img.link-icon {
+        height: 2em;
+      }
+    
+      .display-name, .role-title {
+        text-transform: lowercase;
+        text-align: center;
+      }
+    
+      .user-bio {
+        font-size: max(1em, 2.5vw);
+        color: var(--aqua);
+      }
+    
+      .awards-wrapper {
+        width: 80vw;
+        padding: 2em;
+        background: radial-gradient(closest-side, rgba(16, 12, 28, .9) 40%, rgba(255, 255, 255, 0.07) 90%);
+        backdrop-filter: blur(10px);
+        border-radius: 10px;
+        box-shadow: 0px 1px 4px 1px var(--fuschia);
+      }
+    
+      .user-award {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 2em 0;
+      }
+    
+      .award-label {
+        text-align: center;
+        gap: 2em;
+      }
+    
+      .trophy-emoji {
+        font-size: 2em;
+        position: absolute;
+        left: 1em;
+      }
+    
+      .award-label > h5 {
+        font-size: .83em;
+        color: var(--yellow);
+      }
+    
+      /*--------------------------COLORS--------------------*/
+      .not-interns > h3, 
+      .not-interns > h5 {
+        color: var(--fuschia);
+      }
+    
+      .not-interns > .profile-img {
+        border: 3px solid var(--fuschia);
+      }
+    
+      .dao-heads > h3, 
+      .dao-heads > h5 {
+        color: var(--light-blue);
+      }
+    
+      .dao-heads > .profile-img {
+        border: 3px solid var(--light-blue);
+      }
+
+    
+      .sub-team-leads > h3, 
+      .sub-team-leads > h5 {
+        color: var(--yellow);
+      }
+    
+      .sub-team-leads > .profile-img {
+        border: 3px solid var(--yellow);
+      }
+    
+      .interns > h3, 
+      .interns > h5 {
+        color: var(--violet);
+      }
+    
+      .interns > .profile-img {
+        border: 3px solid var(--violet);
+      }
+      
+    
+
+
+  }

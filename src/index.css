@@ -70,7 +70,6 @@ body {
   margin: 0;
   padding: 0;
   background-image: url('./assets/grid-background.svg');
-  background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: top right;
   background-size: cover;

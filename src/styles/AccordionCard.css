@@ -2,7 +2,14 @@
     display: none;
 }
 
-/* -------------INTERN CARD DESKTOP----------------*/
+.card-link {
+    width: max-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* -------------ACCORDION CARD DESKTOP----------------*/
 @media (min-width: 768px) {
     .card-container {
         display: flex;
@@ -53,9 +60,17 @@
         margin: 0;
         overflow-wrap: break-word;
     }
+
+    .client-name {
+        color: var(--fuschia);
+    }
+
+    .client-thumbnail {
+        border: 3px solid var(--fuschia);
+    }
     }
     
-    /* -------------INTERN CARD MOBILE----------------*/
+    /* -------------ACCORDION CARD MOBILE----------------*/
     
     @media (max-width: 767px) {
     

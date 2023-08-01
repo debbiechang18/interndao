@@ -1,0 +1,5 @@
+<!-- logo-sprite.svg -->
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none;">
+  <image id="desktopLogo" xlink:href="../assets/desktop-logo.png" />
+  <image id="desktopLogoText" xlink:href="../assets/desktop-logo-text.png" />
+</svg>

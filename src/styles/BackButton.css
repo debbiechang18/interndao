@@ -1,0 +1,18 @@
+.back-button-container {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 5em;
+}
+
+.back-button{
+    height: 60px;
+    color: var(--fuschia-semi-transparent);
+    font-size: 1em;
+    background-color: transparent;
+    border: none;
+}
+
+.back-button:hover {
+    color: var(--fuschia);
+}

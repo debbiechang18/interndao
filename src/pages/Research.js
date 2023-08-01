@@ -2,7 +2,7 @@ import React from "react";
 
 const Research = () => {
   return (
-    <h1>THIS IS MY APP BITCH</h1>
+    <h1>research</h1>
   ) 
 }
 

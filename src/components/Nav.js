@@ -9,9 +9,8 @@ function Nav() {
   const location = useLocation();
   const isHomePage = location.pathname === '/';
 
-
   return (
-    <div className="nav-container">
+    <div className={`nav-container ${isHomePage && 'nav-container-home'}`}>
         <Link className={`desktop-logo ${isHomePage ? 'visible' : 'hidden'}`} to="/">
           <GetLogo logoType="desktopLogo" />
           <GetLogo logoType="desktopLogoText" />

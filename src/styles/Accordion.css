@@ -5,8 +5,8 @@ input[name='panel'] {
 .accordion-container {
   display: flex;
   flex-direction: column;
-  margin-top: 10vh;
-  transition-duration: 0.4s;
+  margin-top: 5vw;
+  transition: transform 0.4s;
   overflow: scroll;
 
 }
@@ -32,6 +32,19 @@ input[name='panel'] {
   z-index: 990;
   
 }
+
+.fa-chevron-down {
+  margin-right: 1em;
+}
+
+.chevron {
+  transition: transform 0.3s;
+}
+
+.chevron.rotate {
+  transform: rotate(-90deg);
+}
+
 
 .accordion-label {
   white-space: nowrap;
@@ -66,20 +79,24 @@ input[name='panel'] {
   width: 100%;
   overflow: hidden;
   max-height: 0;
-  transition: max-height 5000s ease;
+  transition: max-height 1s ease;
 }
 
 .collapsible.active {
-  max-height: 10000vh;
-  transition: max-height 5s ease;
+  max-height: 10000px;
+  transition: max-height 1s ease;
 }
 
-
+.accordion-content-wrapper {
+  width: 100%;
+}
 
 /* ==========================COLORS============================ */
-  
+
 .panel_1 > .accordion-header,
-.panel_5 > .accordion-header, 
+.panel_5 > .accordion-header,
+.panel_1 > .chevron,
+.panel_5 > .chevron,
 .panel_1 > .username,
 .panel_5 > .username, 
 .panel_1 > .thumbnail-photo,
@@ -96,6 +113,8 @@ input[name='panel'] {
 
 .panel_2 > .accordion-header,
 .panel_6 > .accordion-header, 
+.panel_2 > .chevron,
+.panel_6 > .chevron,
 .panel_2 > .username,
 .panel_6 > .username, 
 .panel_2 > .thumbnail-photo,
@@ -112,6 +131,8 @@ input[name='panel'] {
 
 .panel_3 > .accordion-header,
 .panel_7 > .accordion-header,
+.panel_3 > .chevron,
+.panel_7 > .chevron,
 .panel_3 > .username,
 .panel_7 > .username, 
 .panel_3 > .thumbnail-photo,
@@ -128,6 +149,8 @@ input[name='panel'] {
 
 .panel_4 > .accordion-header,
 .panel_8 > .accordion-header, 
+.panel_4 > .chevron,
+.panel_8 > .chevron,
 .panel_4 > .username,
 .panel_8 > .username, 
 .panel_4 > .thumbnail-photo,
@@ -152,9 +175,14 @@ input[name='panel'] {
 
   .accordion-header {
     height: max-content;
-    margin-left: 2em;
+    margin-left: 1em;
     margin-top: 0;
   }
+
+  .fa-chevron-down {
+    margin-right: 0em;
+  }
+  
 
   .collapsible {
     display: flex;
@@ -165,6 +193,7 @@ input[name='panel'] {
   .accordion-label {
     margin: 0;
     padding: 1em;
+    font-size: .7em;
   }
 
   .accordion-section-content {

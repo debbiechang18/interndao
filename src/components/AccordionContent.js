@@ -2,68 +2,105 @@ import React from 'react';
 import { useLocation } from 'react-router-dom';
 import InternCard from '../components/InternCard';
 import ConsultingCard from './ConsultingCard';
-import ContactButton from './ContactButton';
-import ConsultingPage from './ConsultingPage';
-import "../styles/Accordion.css";
-import "../styles/ConsultingCard.css";
+import ContactButtons from './ContactButtons';
+import ConsultingPost from './ConsultingPost';
+import '../styles/Accordion.css';
 
-const FILLER_IMAGE_URL = 'logo512.png'; // Replace with your filler image URL
+const FILLER_IMAGE_URL = 'logo512.png';
 
 const AccordionContent = ({ items, index }) => {
   // Retrieve the location object using the useLocation hook
   const location = useLocation();
 
-  // Check if the location object is defined before accessing its properties
-  if (!location) {
-    return null; // Return null or show a loading indicator
-  }
+  const shouldCenterJustify = location.pathname === '/consulting' && items.every(item => item.attributes.section !== 'clients');
 
-  const shouldCenterJustify = location.pathname === '/consulting';
+  // Grouping the ConsultingPost components by section
+  const consultingPostsBySection = items.reduce((acc, item) => {
+    const { section } = item.attributes;
+    if (section !== 'clients') {
+      if (!acc[section]) {
+        acc[section] = [];
+      }
+      acc[section].push(
+        <ConsultingPost
+          header={item.attributes.header}
+          text={item.attributes.text}
+          index={index}
+          key={item.id} // Use a unique key for the React list
+          section={section}
+        />
+      );
+    }
+    return acc;
+  }, {});
+
+  // Create a mapping of section and button data
+  const buttonDataMapping = items.reduce((acc, item) => {
+    const { section, buttonID } = item.attributes;
+    acc[section] = { section, buttonID };
+    return acc;
+  }, {});
 
   return (
     <div className="accordion-content-wrapper expanded">
-      <div className={`accordion-section-content ${shouldCenterJustify && items.some(item => item.section !== 'clients') ? 'center-justify' : ''}`}>
+      <div className={`accordion-section-content ${shouldCenterJustify ? 'center-justify' : ''}`}>
         {items.map((item, i) => {
+          const { section } = item.attributes;
           let renderedItem = null;
-          if (location.pathname === '/interns') {
-            const photoUrl = item.attributes.photo?.data?.attributes?.url || FILLER_IMAGE_URL;
-            renderedItem = (
-              <InternCard 
-                name={item.attributes.name} 
-                photo={photoUrl} 
-                twitter={item.attributes.twitter} 
-                username={item.attributes.username} 
-                index={index} 
-                key={i} 
-                section={item.attributes.section}
-              />
-            );
-          } else if (location.pathname === '/consulting') {
-            if (item.attributes.section === 'clients') {
+
+          switch (location.pathname) {
+            case '/interns':
               const photoUrl = item.attributes.photo?.data?.attributes?.url || FILLER_IMAGE_URL;
               renderedItem = (
-                <div className="accordion-item active">
-                  <ConsultingCard name={item.attributes.name} photo={photoUrl} />
-                </div>
+                <InternCard 
+                  name={item.attributes.name} 
+                  photo={photoUrl} 
+                  twitter={item.attributes.twitter} 
+                  username={item.attributes.username} 
+                  index={index} 
+                  key={i} 
+                  section={section}
+                />
               );
-            } else {
-              renderedItem = (
-                <div
-                  className="accordion-item"
-                  style={item.isExpanded ? { position: 'fixed', top: '0', left: '0', width: '100%', zIndex: '1' } : {}}
-                >
-                  <ConsultingPage content={item.attributes.content} />
-                </div>
-              );
-            }
-          } else if (location.pathname === '/contact') {
-            renderedItem = (
-              <ContactButton buttonID={item.attributes.buttonID} key={i} />
-            );
+              break;
+            case '/consulting':
+              if (section === 'clients') {
+                const clientPhotoUrl = item.attributes.thumbnail || FILLER_IMAGE_URL;
+                const clientName = item.attributes.clientName;
+                renderedItem = (
+                  <ConsultingCard 
+                    clientName={clientName} 
+                    thumbnail={clientPhotoUrl}
+                    index={index}
+                    key={i}
+                    section={section}
+                  />
+                );
+              }
+              break;
+            case '/contact':
+              const buttonData = buttonDataMapping[section]; // Get the button data for this section
+              console.log("buttondata", buttonData)
+              if (buttonData) {
+                renderedItem = (
+                  <ContactButtons section={section} buttonID={buttonData.buttonID} key={i} />
+                );
+              }
+              break;
+            default:
+              break;
           }
 
           return renderedItem;
         })}
+
+        {/* Render the consulting-posts-container only when the page is /consulting and the section is not 'clients' */}
+        {location.pathname === '/consulting' &&
+          Object.entries(consultingPostsBySection).map(([section, consultingPosts]) => (
+            <div key={section} className="consulting-posts-container">
+              {consultingPosts}
+            </div>
+          ))}
       </div>
     </div>
   );

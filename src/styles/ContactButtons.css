@@ -1,0 +1,139 @@
+
+.button-container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2em 0;
+}
+
+.contact-page-button {  
+    width: max(40%, 400px);
+    height: 6em;
+    font-size: 1.15em;
+    transition-duration: 0.4s;
+    cursor: pointer;
+  }
+
+.apply-button {
+  background-color: var(--dark-transparent);
+  color: var(--fuschia); 
+  border: 2px solid var(--fuschia);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.apply-button:hover {
+  background-color: var(--fuschia);
+  color: white;
+}
+
+.consulting-services-button {
+  background-color: var(--dark-transparent);
+  color: var(--light-blue); 
+  border: 2px solid var(--light-blue);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.consulting-services-button:hover {
+  background-color: var(--light-blue);
+  color: white;
+}
+
+.contact-button {
+  background-color: var(--dark-transparent);
+  color: var(--fuschia); 
+  border: 2px solid var(--yellow);
+  border-radius: 10px;
+}
+
+.contact-button:hover {
+  background-color: var(--yellow);
+  color: white;
+}
+
+
+.icon-text-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: #f1f1f1;
+  border: none;
+  color: #333;
+}
+
+.text-icon-text {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  background-color: #f1f1f1;
+  border: none;
+  color: #333;
+}
+.icon-only {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  background-color: #f1f1f1;
+  border: none;
+  color: #333;
+}
+
+.left-icon::before {
+  font-size: 2em;
+  margin-left: 40px;
+  content: var(--crystal-ball);
+}
+
+.right-icon::after {
+  font-size: 2em;
+  margin-right: 40px;
+  content: var(--crystal-ball);
+}
+
+.center-icon::after {
+  font-size: 2em;
+  margin-right: 20px;
+  margin-left: 20px;
+  content: var(--handshake);
+}
+
+.wave-icon::after {
+  font-size: 2em;
+  margin-right: 20px;
+  margin-left: 20px;
+  content: var(--wave);
+}
+
+
+@media (max-width: 767px) {
+
+  .button-container {
+    width: 100%;
+  }
+
+  .contact-page-button {  
+    width: 20em;
+    height: 5em;
+    font-size: 1em;
+  }
+
+  .wave-icon::after,
+  .center-icon::after, 
+  .left-icon::before, 
+  .right-icon::after {
+    font-size: 1.5em;
+  }
+
+
+
+}

@@ -88,15 +88,15 @@
   }  
 
   .content {
+      width: 70vw;
       min-height: 100vh;
-      margin: 0 0 20vw 0;
-      position: relative;
+      padding-bottom: 20vh;
+      position: absolute;
+      right: 0;
   }
 
-  .parallax-content {
-    position: fixed;
-    left: 25vw;
-    overflow: scroll;
+  .home-content {
+    width: 50vw;
   }
 
   .app-container-home {
@@ -114,7 +114,13 @@
 }
 
 
+@media (min-width: 768px) and (max-width: 992px) {
 
+  .content {
+    width: 68vw;
+}
+
+}
 
 
 

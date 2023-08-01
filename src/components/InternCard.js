@@ -1,8 +1,8 @@
 import React from "react";
-import "../styles/InternCard.css";
+import "../styles/AccordionCard.css";
 import { Link } from 'react-router-dom';
 
-const InternCard = ({ name, photo, username, index, section }) => {
+const InternCard = ({ name, photo, username, index }) => {
   const profilePhoto = `${photo}`;
 
   const handleClick = () => {

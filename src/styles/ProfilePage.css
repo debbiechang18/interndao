@@ -1,0 +1,124 @@
+
+
+  .profile-page-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2vw;
+    width: 90%;
+    margin-top: 5vw;
+    height: max-content;
+  }
+
+  .profile-wrapper {
+    background: radial-gradient(closest-side, rgba(16, 12, 28, .9) 40%, rgba(255, 255, 255, 0.07) 90%);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    height: 80vh;
+    padding: 20px;
+    box-shadow: -1px .5px 2px 1px rgba(5, 234, 255, 1);
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+  }
+
+  .left-panel {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+  }
+
+  .profile-img {
+    width: 100%;
+
+  }
+
+  .social-links {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+  }
+
+  a.social-link {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+  }
+
+  i.social-icons {
+    color: var(--yellow);
+    font-size: 1.5em;
+  }
+
+  img.link-icon {
+    height: 1.5em;
+  }
+
+  .right-panel {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    padding: 1em 0;
+  }
+
+  .display-name, .role-title {
+    text-transform: lowercase;
+  }
+
+  .user-bio {
+    color: var(--aqua);
+    height: 80%;
+    overflow-y: scroll;
+  }
+
+  .awards-wrapper {
+    width: 100%;
+    background: radial-gradient(closest-side, rgba(16, 12, 28, .9) 40%, rgba(255, 255, 255, 0.07) 90%);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    box-shadow: -1px .5px 2px 1px rgba(5, 234, 255, 1);
+  }
+
+  .user-award {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2em 0;
+  }
+
+  .award-label {
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+  }
+
+  .trophy-emoji {
+    font-size: 3em;
+    position: absolute;
+    left: .5em;
+  }
+
+  .award-label > h5 {
+    color: var(--yellow);
+  }
+
+  /*--------------------------COLORS--------------------*/
+  .not-interns * h3, 
+  .not-interns * h5 {
+    color: var(--fuschia);
+  }
+
+  .not-interns * .profile-img {
+    border: 3px solid var(--fuschia);
+  }
+
+  .dao-heads * h3, 
+  .dao-heads * h5 {
+    color: var(--light-blue);
+  }
+
+  .dao-heads * .profile-img {
+    border: 3px solid var(--light-blue);
+  }

@@ -1,6 +1,6 @@
 .nav-container {
     position: fixed;
-    width: 50vw;
+    width: 40vw;
     aspect-ratio: 8/10;
     max-height: 100vh;
     display: grid;
@@ -13,11 +13,16 @@
       "pink-track pink-track pink-track"
       "contact-info-container . .";
 
-      gap: 5em 0;
+    gap: 3em 0;
+    height: 60vh;
+  }
+
+  .nav-container-home {
+    position: relative;
   }
   
   .nav-container > * {
-    width: 100%;
+    width: 90%;
     height: 100%;
   }
   
@@ -118,14 +123,6 @@
   }
   
   
-  @media (min-width: 768px) and (max-width: 992px) {
-  
-    .nav-link h5{
-      font-size: .83em;
-    }
-  }
-  
-  
   /*--------------------------CONTACT INFO---------------------------*/
   .contact-info-container {
     display: flex;
@@ -143,12 +140,12 @@
     gap: 1em;
   }
   
-  .contact-info-desktop h5 {
+  .contact-info-desktop h5, 
+  .contact-info-desktop .emoji-bullet {
     color: var(--yellow);
     font-size: max(1em, 1.2vw)
   }
-
-
+  
   
   .blank {
     width: 10vw;
@@ -157,15 +154,36 @@
   
     /*--------------------------FINE TUNING---------------------------*/
 
-.desktop-logo, .navigation-menu, .contact-info-container {
+.contact-info-container {
     padding-left: 4vw;
 }
-  
-/* @media (max-width: 991px) {
-      #desktop-logo {
-        width: 30vw;
-        height: auto;
-        display: block;
-      }
-      
+
+/* @media (min-width: 768px) and (max-width: 1080px) {
+
+  .navigation-menu, .contact-info-container {
+    padding-left: 0vw;
+  }
+
 } */
+
+  
+@media (min-width: 768px) and (max-width: 1080px) {
+  
+  .nav-link h5{
+    font-size: .83em;
+  }
+
+  .navigation-menu {
+    padding-left: 1vw;
+  }
+
+  .navigation-links {
+    padding-left: 1vw;
+  }
+}
+
+@media (min-width: 900px) and (max-width: 1080px) {
+  .navigation-links {
+    padding-left: 2vw;
+  }
+}

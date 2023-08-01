@@ -177,22 +177,22 @@
 }
 
 /* Hide the default scrollbar */
-::-webkit-scrollbar {
+.user-bio::-webkit-scrollbar {
   width: 2px; /* Set the width of the scrollbar */
 }
 
 /* Track - the area behind the thumb */
-::-webkit-scrollbar-track {
+.user-bio::-webkit-scrollbar-track {
   background: var(--dark-transparent); /* Set the background color of the track */
 }
 
 /* Thumb - the draggable scrolling handle */
-::-webkit-scrollbar-thumb {
+.user-bio::-webkit-scrollbar-thumb {
   background: var(--aqua-transparent); /* Set the color of the thumb */
   border-radius: 10px; /* Add rounded corners to the thumb */
 }
 
 /* On hover, the thumb color */
-::-webkit-scrollbar-thumb:hover {
+.user-bio::-webkit-scrollbar-thumb:hover {
   background: var(--aqua);
 }

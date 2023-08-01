@@ -53,7 +53,11 @@
     text-align: center;
     color: #808080;
     box-shadow: inset 1px 1px #dfdfdf, inset -1px -1px gray !important;
-    border-radius: 0 !important;
+    border-radius: 0px !important;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    -o-border-radius: 0;
   }
   
   .ok-button {

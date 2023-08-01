@@ -70,6 +70,8 @@
   
   .ok-emoji {
     height: 24px;
+    position: relative;
+    top: 2px;
   }
   
   .textbox-body::-webkit-scrollbar {

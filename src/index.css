@@ -72,7 +72,12 @@ body {
   background-image: url('./assets/background.svg');
   background-attachment: fixed;
   background-position: top right;
-  background-size: auto 100%;
+  background-size: cover;
   z-index: -1;
 }
 
+@media (max-width: 767px) {
+  body {
+    background-size: auto 100%;
+  }
+}

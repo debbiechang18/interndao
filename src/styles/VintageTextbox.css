@@ -52,12 +52,9 @@
     font-weight: bold;
     text-align: center;
     color: #808080;
-    box-shadow: inset 1px 1px #dfdfdf, inset -1px -1px gray !important;
-    border-radius: 0px !important;
-    -webkit-border-radius: 0px !important;
-    -moz-border-radius: 0px !important;
-    -ms-border-radius: 0px !important;
-    -o-border-radius: 0px !important;
+    box-shadow: inset 1px 1px #dfdfdf, inset -1px -1px gray;
+    -webkit-appearance: none !important;
+
   }
   
   .ok-button {

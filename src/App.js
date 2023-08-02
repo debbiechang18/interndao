@@ -16,6 +16,7 @@ import { useMediaQuery } from "react-responsive";
 import TermsOfService from "./pages/TermsOfService";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import InformationSecurity from "./pages/InformationSecurity";
+import ComingSoon from "./components/ComingSoon"
 
 const App = () => {
   const location = useLocation();
@@ -60,9 +61,10 @@ const App = () => {
           <Route path="/research" element={<Research />} />
           <Route path="/tools" element={<Tools />} />
           <Route path="/interns/:username" element={<ProfilePage />} />
-          <Route path="/terms-of-service" element={<TermsOfService />} />
-          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-          <Route path="/information-security-statement" element={<InformationSecurity />} />
+          <Route path="/apply" element={<ComingSoon />} />
+          <Route path="/terms-of-service" element={<ComingSoon />} />
+          <Route path="/privacy-policy" element={<ComingSoon />} />
+          <Route path="/information-security-statement" element={<ComingSoon />} />
         </Routes>
       </article>
 

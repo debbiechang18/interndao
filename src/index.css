@@ -68,7 +68,7 @@ body {
   height: 100vh;
   margin: 0;
   padding: 0;
-  background-image: url('../public/background.png');
+  background-image: url('../public/background-full.svg');
   background-attachment: fixed;
   background-position: top right;
   background-size: cover;

@@ -4,6 +4,6 @@ InternDAO is a pivotal hub for information, branding, and community engagement.
 
 # Features 
 
-Admins and designated users are able to edit the content on specified areas of the website (i.e. member information, research articles) via Strapi CMS. 
-
-
+Notable features include: 
+- Fully responsive custom css optimized for mobile, tablet, and desktop formats.
+- Easy content management for authorized users using Strapi CMS

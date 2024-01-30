@@ -3,22 +3,26 @@ import "../styles/VintageTextbox.css";
 import okEmoji from "../assets/ok-button.png";
 import axios from "axios";
 import { ReactMarkdown } from "react-markdown/lib/react-markdown";
+import text from "../data/philosophyText";
 
 const VintageTextbox = () => {
   const [philosophyText, setPhilosophyText] = useState("");
 
   useEffect(() => {
-    const apiUrl = "https://strapi-production-5302.up.railway.app/api/philosophy-text";
+    const defaultPhilosophyText = text;
+    const apiUrl =
+      "https://strapi-production-5302.up.railway.app/api/philosophy-text";
 
     axios
       .get(apiUrl)
       .then((response) => {
         // handle API response data
         const philosophyTextData = response.data.data.attributes.text;
-        setPhilosophyText(philosophyTextData);
+        setPhilosophyText(philosophyText);
       })
       .catch((error) => {
         console.error("Error fetching philosophy text:", error);
+        setPhilosophyText(defaultPhilosophyText);
       });
   }, []);
 
@@ -34,7 +38,9 @@ const VintageTextbox = () => {
           <button>X</button>
         </div>
         <div className="textbox-body">
-            <ReactMarkdown className="trispace-font">{philosophyText}</ReactMarkdown>
+          <ReactMarkdown className="trispace-font">
+            {philosophyText}
+          </ReactMarkdown>
         </div>
         <button className="ok-button">
           <img className="ok-emoji" src={okEmoji} alt="ok emoji" />

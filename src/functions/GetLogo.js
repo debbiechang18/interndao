@@ -4,6 +4,7 @@ import axios from "axios";
 function GetLogo({ logoType }) {
   const defaultLogo = "logo-icon-yellow.svg";
   const defaultLogoText = "logo-text.svg";
+  const defaultLogoMobile = "logo-mobile.svg";
 
   // Determine the default logo based on the logoType
   const defaultLogoData =
@@ -11,6 +12,8 @@ function GetLogo({ logoType }) {
       ? defaultLogo
       : logoType === "desktopLogoText"
       ? defaultLogoText
+      : logoType === "mobileLogo"
+      ? defaultLogoMobile
       : null;
 
   const [logoData, setLogoData] = useState(defaultLogoData);

@@ -1,5 +1,5 @@
-import { useState, useEffect } from 'react';
-import axios from 'axios';
+import { useState, useEffect } from "react";
+import axios from "axios";
 
 const useContactData = () => {
   // State to hold the fetched button data
@@ -13,7 +13,9 @@ const useContactData = () => {
     const fetchButtonData = async () => {
       try {
         // Send a GET request to the API to fetch button data
-        const response = await axios.get('https://strapi-production-5302.up.railway.app/api/contact-buttons');
+        const response = await axios.get(
+          "https://strapi-production-b624.up.railway.app/api/contact-buttons"
+        );
 
         // Sort the buttons by their id attribute
         const sortedButtons = response.data.data.sort((a, b) => a.id - b.id);
@@ -25,7 +27,7 @@ const useContactData = () => {
         setLoading(false);
       } catch (error) {
         // If there's an error during the fetch, handle it here
-        console.error('Error fetching button data:', error);
+        console.error("Error fetching button data:", error);
 
         // Set 'loading' to 'false' even if there's an error, so it doesn't stay in a loading state forever
         setLoading(false);

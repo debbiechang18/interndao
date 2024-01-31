@@ -1,111 +1,122 @@
 .research-card-container {
-    border-radius: 10px;
-    width: max(14em, 28vw);
-    height: max(35em, 40vw);
+  border-radius: 10px;
+  width: max(14em, 28vw);
+  height: max(20em, 40vw);
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  background: rgb(33, 22, 50);
+  background: radial-gradient(
+    closest-side,
+    rgba(33, 22, 50, 0.1) 0%,
+    rgba(255, 255, 255, 0.1) 99%
+  );
+  backdrop-filter: blur(5px);
+  box-shadow: 0px -1px 2px 1px rgba(5, 234, 255, 0.7);
+}
+
+.research-card {
+  width: 100%;
+}
+
+.research-thumbnail-container {
+  width: 100%;
+  height: 50%;
+  overflow: hidden;
+}
+
+.thumbnail-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-title.play-font {
+  max-width: 80%;
+  line-height: 1.5em;
+  color: var(--yellow);
+  font-size: max(1em, 1vw);
+  padding-left: 1em;
+  padding-top: 1em;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.card-text {
+  width: 100%;
+}
+
+.card-subtitle {
+  color: var(--aqua);
+  font-size: max(1em, 1vw);
+  line-height: 1.5em;
+  padding: 10px;
+  width: 95%;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 5;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-bottom: 0;
+}
+
+.bio-text {
+  height: auto;
+}
+
+/*-----------------------DESKTOP----------------------*/
+@media (min-width: 768px) {
+  @keyframes cardFadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .research-card-container {
+    animation: cardFadeIn 0.3s ease-in-out;
+    animation-fill-mode: both;
+    animation-delay: calc(var(--index) * 0.2s);
+  }
+}
+
+/*-----------------------MOBILE----------------------*/
+
+@media (max-width: 549px) {
+  .research-card-container {
+    width: max(15em, 70vw);
+    height: max-content;
     display: flex;
     flex-direction: column;
-    padding: 10px;
-    background: rgb(33, 22, 50);
-    background: radial-gradient(closest-side, rgba(33, 22, 50, 0.1) 0%, rgba(255, 255, 255, 0.1) 99%);
-    backdrop-filter: blur(5px);
-    box-shadow: 0px -1px 2px 1px rgba(5, 234, 255, 0.7);
   }
 
-  .research-card {
-    width: 100%;
-  }
-
-  .research-thumbnail-container {
-    width: 100%;
-    height: 50%;
-    overflow: hidden;
-  }
-  
-  .thumbnail-img {
-    width: 100%;
-  }
-  
   .card-title.play-font {
-    max-width: 80%;
-    line-height: 1.5em;
-    color: var(--yellow);
-    font-size: max(1em, 1vw);
-    padding-left: 1em;;
-    padding-top: 1em;
+    max-width: 70%;
   }
+}
 
-  .card-text {
-    width: 100%;
+@media (min-width: 550px) and (max-width: 767px) {
+  .research-card-container {
+    width: max(14em, 40vw);
+    height: 35em;
+    display: flex;
+    flex-direction: column;
   }
-  
-  .card-subtitle {
-    color: var(--aqua);
-    font-size: max(1em, 1vw);
-    line-height: 1.5em;
-    padding: 10px;
-    width: 95%;
-  }
+}
 
-  .bio-text {
-    height: auto;
-  }
-
-  
-  /*-----------------------DESKTOP----------------------*/
-  @media (min-width: 768px) {
-    @keyframes cardFadeIn {
-      from {
-        opacity: 0;
-        transform: translateY(50px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    .research-card-container {
-      animation: cardFadeIn .3s ease-in-out; 
-      animation-fill-mode: both;
-      animation-delay: calc(var(--index) * 0.2s); 
-    }
-  }
-  
-
-  /*-----------------------MOBILE----------------------*/
-
-  @media (max-width: 549px) {
-    .research-card-container {
-      width: max(15em, 70vw);
-      height: max-content;
-      display: flex;
-      flex-direction: column;
-    }
-  
-    .card-title.play-font {
-      max-width: 70%;
-    }
-  }
-
-  @media (min-width: 550px) and (max-width: 767px) {
-
-    .research-card-container {
-      width: max(14em, 40vw);
-      height: 35em;
-      display: flex;
-      flex-direction: column;
-    }
-
-  }
-
-
-
-    /*-----------------------LARGE DESKTOP----------------------*/
+/*-----------------------LARGE DESKTOP----------------------*/
 @media (min-width: 1440px) {
   .research-card-container {
     width: 18vw;
     height: 35vw;
-    padding-right: 1em;
+    padding: 1em;
   }
 }
-  

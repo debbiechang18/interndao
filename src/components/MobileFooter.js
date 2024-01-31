@@ -15,8 +15,10 @@ const MobileFooter = () => {
   const [telegramUrl, setTelegramUrl] = useState("");
 
   useEffect(() => {
-    const footerTextApiUrl = "https://strapi-production-5302.up.railway.app/api/footer-text";
-    const contactApiUrl = "https://strapi-production-5302.up.railway.app/api/contact-info";
+    const footerTextApiUrl =
+      "https://strapi-production-b624.up.railway.app/api/footer-text";
+    const contactApiUrl =
+      "https://strapi-production-b624.up.railway.app/api/contact-info";
 
     axios
       .get(footerTextApiUrl)
@@ -99,11 +101,17 @@ const MobileFooter = () => {
           <h5 className="trispace-font mobile-link-sm"> Privacy Policy </h5>
         </Link>
         <Link to="/information-security-statement">
-          <h5 className="trispace-font mobile-link-sm"> Information Security Statement </h5>
+          <h5 className="trispace-font mobile-link-sm">
+            {" "}
+            Information Security Statement{" "}
+          </h5>
         </Link>
       </div>
       <div className="copyright-mobile">
-        <h5 className="trispace-font copyright-text">Copyright &copy; 2022 InternDao. <br />All Rights Reserved.</h5>
+        <h5 className="trispace-font copyright-text">
+          Copyright &copy; 2023 InternDao. <br />
+          All Rights Reserved.
+        </h5>
       </div>
     </div>
   );

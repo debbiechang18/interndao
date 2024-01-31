@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import CardList from '../components/CardList';
+import CardList from "../components/CardList";
 import axios from "axios";
 
 const Research = () => {
@@ -12,7 +12,8 @@ const Research = () => {
   }, []);
 
   useEffect(() => {
-    const apiUrl = "https://strapi-production-5302.up.railway.app/api/research-posts?populate=*";
+    const apiUrl =
+      "https://strapi-production-b624.up.railway.app/api/research-posts?populate=*";
 
     axios
       .get(apiUrl)

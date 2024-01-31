@@ -7,7 +7,9 @@ const ResearchCard = ({ title, image, subtitle, url }) => {
     <div className="research-card-container">
       <div className="research-card animate-card">
         <div className="research-thumbnail-container">
-          <img src={coverImage} alt={title} className="thumbnail-img" />
+          <a href={url}>
+            <img src={coverImage} alt={title} className="thumbnail-img" />
+          </a>
         </div>
         <div className="card-text">
           <h5 className="card-title play-font">{title}</h5>
@@ -19,4 +21,3 @@ const ResearchCard = ({ title, image, subtitle, url }) => {
 };
 
 export default ResearchCard;
-
